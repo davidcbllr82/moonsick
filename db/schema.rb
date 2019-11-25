@@ -10,10 +10,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_25_143705) do
+ActiveRecord::Schema.define(version: 2019_11_25_145639) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "attendees", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_attendees_on_event_id"
+    t.index ["user_id"], name: "index_attendees_on_user_id"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "title"
+    t.string "description"
+    t.string "banner_url"
+    t.datetime "scheduled_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
+  create_table "moments", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "event_id"
+    t.string "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_moments_on_event_id"
+    t.index ["user_id"], name: "index_moments_on_user_id"
+  end
+
+  create_table "playlists", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "title"
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_playlists_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +66,10 @@ ActiveRecord::Schema.define(version: 2019_11_25_143705) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "attendees", "events"
+  add_foreign_key "attendees", "users"
+  add_foreign_key "events", "users"
+  add_foreign_key "moments", "events"
+  add_foreign_key "moments", "users"
+  add_foreign_key "playlists", "users"
 end
