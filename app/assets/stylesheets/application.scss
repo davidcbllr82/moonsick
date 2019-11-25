@@ -11,3 +11,8 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+// import UI KIT
+@import "uikit/variables-theme.scss";
+@import "uikit/mixins-theme.scss";
+@import "uikit/uikit-theme.scss";
