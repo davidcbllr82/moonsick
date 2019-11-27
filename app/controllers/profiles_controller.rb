@@ -1,25 +1,28 @@
 class ProfilesController < ApplicationController
-  before_action :set_profile, only: [:show, :edit, :update]
+  attr_reader :user
+  before_action :set_profile, only: [:show]
 
   def show
   end
 
   def edit
+    authorize current_user
   end
 
   def update
-    @profile.update(profile_params)
-    redirect_to profile_path(User.find(params[:id]))
+    authorize current_user
+    current_user.update(profile_params)
+    redirect_to profile_path(current_user)
   end
-
 
   private
 
   def profile_params
-    params.require(:profile).premit(:username, :profile_avatar)
+    params.require(:user).permit(:username, :location, :bio, :date_of_birth)
   end
 
   def set_profile
     @profile = User.find(params[:id])
+    authorize @profile
   end
 end
