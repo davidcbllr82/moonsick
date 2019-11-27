@@ -1,6 +1,44 @@
 
-<!-- metadata to be modifiled for each invividual event once shared
-<% content_for :meta_title, "#{@offer.name} is on #{DEFAULT_META["meta_product_name"]}" %>
-<% content_for :meta_description, @offer.description %>
-<% content_for :meta_image, cl_image_path(@offer.photo.path) %>
--->
+
+<h1>This is one event</h1>
+
+<p><%= @event.title %></p>
+<p><%= @event.description %></p>
+
+<!--  if you are the creater see these options -->
+
+  <% if policy(@event).edit? %>
+
+    <%= link_to "Edit Event", edit_event_path(@event) %>
+    <%= link_to "Delete Event ☠️", event_path(@event), method: :delete %>
+
+<!-- click attend and create a new instance of an event -->
+
+  <% elsif user_signed_in? %>
+
+      <% unless current_user.attendees.pluck(:event_id).include?(params[:id].to_i) %>
+
+        <%= simple_form_for([@event, @attendee]) do |f| %>
+              <%= f.submit "Attend", class: "icon__attend_count" %>
+
+        <% end %>
+    <% else %>
+<!-- display attendees -->
+      <%= @attendees.count %>
+       <!-- change to avatar on pop up name and link to user_profile -->
+    <% end %>
+<% end %>
+
+<!-- Create and display moments -->
+
+<%= form_for([@event, @moment]) do |m| %>
+  <%= m.label :content %>
+  <%= m.text_field :content %>
+
+  <%= m.submit %>
+<% end %>
+
+<% @moments.each do |m| %>
+    <%= m.user.email %>
+    <p><%= m.content %></p>
+<% end %>

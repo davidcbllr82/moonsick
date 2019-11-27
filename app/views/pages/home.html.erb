@@ -1,3 +1,22 @@
 <h1>DEYZBOARD</h1>
 
 <p>Welcome to our home page!! Stayed tuned in!</p>
+
+<!-- These links are for the sidebar in order to be able to navigate on the dashboards -->
+
+<p>
+  <%= link_to "See events", events_path %>
+
+  <!-- moments that are displayed should be yours and the ones that have been shared directly to you -->
+  <%= link_to "See moments", moments_path %>
+
+</p>
+
+
+<!-- The notifications part - display new moments that have been shared t you -->
+
+<!-- The new section - display new events, new friends that have joined -->
+
+<!-- create new event button -->
+
+<%= link_to "Create", new_event_path %>

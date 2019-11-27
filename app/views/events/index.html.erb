@@ -1,4 +1,5 @@
 <% @events.each do |e| %>
-  <%= e.title %>
+  <%= link_to e.title, event_path(e) %>
   <%= e.description %>
 <% end%>
+

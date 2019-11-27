@@ -4,7 +4,7 @@ class AttendeesController < ApplicationController
   end
 
   def show
-   @attendee = Attendee.find(params[:id])
+    @attendee = Attendee.find(params[:id])
   end
 
   def create
