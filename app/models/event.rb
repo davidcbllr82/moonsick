@@ -6,4 +6,8 @@ class Event < ApplicationRecord
 
   validates :title, presence: true
   validates :description, presence: true
+
+  mount_uploader :banner, PhotoUploader
+  mount_uploader :event_avatar, PhotoUploader
+
 end
