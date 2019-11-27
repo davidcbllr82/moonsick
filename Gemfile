@@ -17,6 +17,8 @@ gem 'uglifier'
 gem 'webpacker'
 gem "rails-uikit", git: 'git://github.com/nicbet/rails-uikit.git'
 gem 'pundit'
+gem 'dotenv-rails', groups: [:development, :test]
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'
