@@ -12,15 +12,17 @@ class EventsController < ApplicationController
 
     # create a new moment and display all
     @moment = Moment.new
-    @moments = Moment.all
+    @moments = @event.moments
   end
 
   def new
     @event = Event.new
+    authorize @event
   end
 
   def create
     @event = Event.new(event_params)
+    authorize @event
     @event.user = current_user
     if @event.save
       redirect_to event_path(@event)
@@ -45,7 +47,7 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:title, :description)
+    params.require(:event).permit(:title, :description, :event_avatar, :event_avatar_cache, :banner, :banner_cache)
   end
 
   def find_event
