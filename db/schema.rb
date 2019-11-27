@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2019_11_26_102226) do
     t.bigint "user_id"
     t.string "title"
     t.string "description"
-    t.string "banner_url"
+    t.string "banner"
     t.datetime "scheduled_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

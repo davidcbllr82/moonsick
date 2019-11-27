@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :events do
     resources :attendees, only: [:show, :create]
-    resources :moments, only: [:index, :create, :update, :destroy]
+    resources :moments, only: [:create, :update, :destroy]
   end
   resources :playlists, only: [:index, :create, :destroy]
   resources :profiles, only: [:index, :show, :edit, :update]
