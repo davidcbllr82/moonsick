@@ -1,15 +1,18 @@
 class EventsController < ApplicationController
-  before_action :find_event, only: [:show, :new, :create, :edit, :update, :destroy]
+  before_action :find_event, only: [:show, :edit, :update, :destroy]
 
   def index
-    @events = Event.all
+    @events = policy_scope(Event)
   end
 
   def show
+    # create a new attendee and display it
+    @attendee = Attendee.new
+    @attendees = Attendee.all
   end
 
   def new
-   @event = Event.new
+    @event = Event.new
   end
 
   def create
@@ -22,7 +25,8 @@ class EventsController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+  end
 
   def update
     @event.update(event_params)
@@ -30,7 +34,7 @@ class EventsController < ApplicationController
   end
 
   def destroy
-   @event.destroy
+    @event.destroy
     redirect_to root_path
   end
 
@@ -42,5 +46,6 @@ class EventsController < ApplicationController
 
   def find_event
     @event = Event.find(params[:id])
+    authorize @event
   end
 end

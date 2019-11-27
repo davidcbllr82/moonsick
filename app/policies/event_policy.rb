@@ -9,16 +9,20 @@ class EventPolicy < ApplicationPolicy
     true
   end
 
+  def show?
+    true
+  end
+
   def new?
     create?
   end
 
-  def edit?
+  def update?
     record.user == user
   end
 
-  def update?
-    edit?
+  def edit?
+    update?
   end
 
   def destroy?
