@@ -29,3 +29,16 @@
     <% end %>
 <% end %>
 
+<!-- Create and display moments -->
+
+<%= form_for([@event, @moment]) do |m| %>
+  <%= m.label :content %>
+  <%= m.text_field :content %>
+
+  <%= m.submit %>
+<% end %>
+
+<% @moments.each do |m| %>
+    <%= m.user.email %>
+    <p><%= m.content %></p>
+<% end %>

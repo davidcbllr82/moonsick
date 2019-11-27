@@ -9,6 +9,10 @@ class EventsController < ApplicationController
     # create a new attendee and display it
     @attendee = Attendee.new
     @attendees = Attendee.all
+
+    # create a new moment and display all
+    @moment = Moment.new
+    @moments = Moment.all
   end
 
   def new
