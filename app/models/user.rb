@@ -7,4 +7,7 @@ class User < ApplicationRecord
   has_many :moments
   has_many :events
   has_many :attendees
+
+  mount_uploader :profile_banner, PhotoUploader
+  mount_uploader :profile_avatar, PhotoUploader
 end
