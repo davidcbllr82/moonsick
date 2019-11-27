@@ -3,16 +3,46 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>TODO</title>
+    <title>Deyz - Music Share</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+    <%= stylesheet_pack_tag 'application', media: 'all' %>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous">
+    </script>
   </head>
+
   <body>
-    <%= render 'shared/sidebar' %>
-    <%= render 'shared/flashes' %>
-    <%= yield %>
+    <div class="ui sidebar visible vertical left inverted menu">
+      <a class="item">
+        <i class="home icon"></i>
+        Deyzboard
+      </a>
+      <a class="item">
+        <i class="block layout icon"></i>
+        Events
+      </a>
+      <a class="item">
+        <i class="smile icon"></i>
+        Friends
+      </a>
+      <a class="item">
+        <i class="smile icon"></i>
+        Moments
+      </a>
+    </div>
+    <div class="dimmed pusher">
+      <div class="ui container">
+        <button id="toggle">toggle</button>
+        <%= yield %>
+        <%= render 'shared/flashes' %>
+        <%= render "shared/button" %>
+      </div>
+    </div>
+
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>

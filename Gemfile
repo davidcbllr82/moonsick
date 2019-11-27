@@ -16,6 +16,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem "rails-uikit", git: 'git://github.com/nicbet/rails-uikit.git'
+gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
@@ -29,4 +30,3 @@ group :development, :test do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
 end
-
