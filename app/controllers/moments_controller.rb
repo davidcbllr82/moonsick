@@ -1,7 +1,7 @@
 class MomentsController < ApplicationController
-
   def create
     @moment = Moment.new(moment_params)
+    authorize @moment
     @moment.user = current_user
     @moment.event = Event.find(params[:event_id])
     @moment.save
@@ -16,6 +16,6 @@ class MomentsController < ApplicationController
   private
 
   def moment_params
-    params.require(:moments).permit(:content)
+    params.require(:moment).permit(:content)
   end
 end

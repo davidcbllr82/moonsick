@@ -1,0 +1,12 @@
+<!-- _form.html.erb -->
+
+<%= form_for(@event) do |e| %>
+  <%= e.label :title %>
+  <%= e.text_field :title %>
+
+  <%= e.label :description %>
+  <%= e.text_field :description %>
+
+
+  <%= e.submit %>
+<% end %>
