@@ -35,34 +35,9 @@
     </script>
   </head>
 
-  <body>
-    <div class="ui sidebar visible vertical left inverted menu">
-      <a class="item">
-        <i class="home icon"></i>
-        Deyzboard
-      </a>
-      <a class="item">
-        <i class="block layout icon"></i>
-        Events
-      </a>
-      <a class="item">
-        <i class="smile icon"></i>
-        Friends
-      </a>
-      <a class="item">
-        <i class="smile icon"></i>
-        Moments
-      </a>
-    </div>
-    <div class="dimmed pusher">
-      <div class="ui container">
-        <button id="toggle">toggle</button>
+  <body class="layout-primary">
+    <%= render 'shared/sidebar' %>
         <%= yield %>
-        <%= render 'shared/flashes' %>
-        <%= render "shared/button" %>
-      </div>
-    </div>
-
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>

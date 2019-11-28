@@ -1,1 +1,31 @@
 // Specific CSS for your home-page
+
+.home-page {
+  display: flex;
+
+}
+.bg-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: rgba(247, 245, 238, 0.77);
+  opacity: 0.78;
+  backdrop-filter: blur(38px);
+}
+.side-img {
+}
+.title-sign {
+  position: absolute;
+  right: 305px;
+  font-family: Rationale;
+  font-weight: normal;
+  font-size: 30px;
+  margin-top: 40px !important;
+}
+.title-log {
+  position: absolute;
+  right: 100px;
+  font-family: Rationale;
+  font-weight: normal;
+  font-size: 30px;
+  margin-top: 40px !important;
+}
