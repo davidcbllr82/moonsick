@@ -2,7 +2,7 @@
 
 .mouse-cursor-gradient-tracking {
   position: relative;
-  background: #7983ff;
+  background: #EE6E79;
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
   border: none;
@@ -24,7 +24,7 @@
   top: var(--y);
   width: var(--size);
   height: var(--size);
-  background: radial-gradient(circle closest-side, pink, transparent);
+  background: radial-gradient(circle closest-side, #F1B042, transparent);
   transform: translate(-50%, -50%);
   transition: width 0.2s ease, height 0.2s ease;
 }
