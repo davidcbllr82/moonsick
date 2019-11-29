@@ -1,8 +1,11 @@
 // Specific CSS for your home-page
+
+// ======================== > > Devise/registrations#new
+
+// ======================== > > Devise/sesionsa#new
 .home-page {
   display: flex;
 }
-
 .grid-centering {
   display: grid;
   justify-content: center;
@@ -29,6 +32,34 @@
   height: 7px;
   background: linear-gradient(270deg, #EE6E79 7.16%, #6DC142 100%);
 }
+
+// ======================================== > Profiles#edit
+
+.profile__edit-page {
+  display: grid;
+  grid-template-rows: 1fer 1fr;
+}
+.header-container {
+  font-family: Rationale;
+  margin-top: 61px;
+  margin-left: 100px;
+  margin-bottom: 117px;
+}
+.title-header,
+.sub-title {
+  font-family: Rationale;
+}
+.title-header {
+  font-size: 60px;
+}
+.sub-title {
+  font-size: 30px;
+}
+.underline {
+  width: 405px;
+  height: 10px;
+  background: #F1B042;
+}
 .titles {
   width: 900px;
   font-size: 0;
@@ -39,4 +70,11 @@
 .uk-input {
   display: inline-block;
 }
+
+// ======================================== > Profiles#show
+.profile__show {
+  display: grid;
+  grid-template-rows: 1fer 1fr;
+}
+
 
