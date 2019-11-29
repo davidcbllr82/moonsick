@@ -8,10 +8,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.side-img {
-}
 .title-signup,
-.title-login {
+.title-login,
+.title-forgot {
   width: calc(900px / 3);
   display: inline-block;
 }
@@ -23,7 +22,6 @@
 .title-underline {
   width: 90px;
   height: 7px;
-  margin-top: 10% !important;
   background: linear-gradient(270deg, #EE6E79 7.16%, #6DC142 100%);
 }
 .titles {
@@ -35,4 +33,7 @@
 }
 .uk-input {
   display: inline-block;
+}
+form-inputs {
+
 }
