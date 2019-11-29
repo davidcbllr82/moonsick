@@ -1,13 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Rationale&display=swap');
 // _common.scss
-
+@import url('https://fonts.googleapis.com/css?family=Raleway|Ramabhadra|Rationale|Red+Hat+Display|Red+Hat+Text:400,500,700|Roboto+Condensed|Rubik+Mono+One|Scada:400,700&display=swap');
 // COLORS
+$red: #FD1015;
+$blue: #167FFB;
+$yellow: #FFC65A;
+$orange: #E67E22;
+$green: #1EDD88;
+$gray: #0E0000;
+$light-gray: #F4F4F4;
 
 // GRADIENT
 
 // FONTS
-
-// $form-titles: 'Rationale', sans-serif;
+$body-font: "Open Sans", "Helvetica", "sans-serif";
+$headers-font: "Raleway", "Helvetica", "sans-serif";
+$buttons-font: "Rationale", "sans-serif";
 
 // BOX SHADOWS
-

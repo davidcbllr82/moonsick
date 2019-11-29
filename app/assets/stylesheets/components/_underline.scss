@@ -1,0 +1,21 @@
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+  width: 90px;
+  height: 7px;
+  background: linear-gradient(270deg, #EE6E79 7.16%, #6DC142 100%);
+}
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  transform: scaleX(0);
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
