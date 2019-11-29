@@ -2,6 +2,11 @@ class ProfilesController < ApplicationController
   attr_reader :user
   before_action :set_profile, only: [:show]
 
+  def index
+    @profiles = User.all
+    @profiles = policy_scope(User)
+  end
+
   def show
   end
 

@@ -1,5 +1,13 @@
 
 
+<%= @profile.username %>
+<%= @profile.date_of_birth %>
+<%= @profile.location %>
+<%= @profile.bio %>
+
+<%= cl_image_tag @profile.profile_avatar, height: 100, width: 100 %>
+<%= cl_image_tag @profile.profile_banner, height: 100, width: 100 %>
+
 <%-# here a profile is displayed  -%>
 <%-# if the record.user == user display edit options if not its just a view of the person using it -%>
 
@@ -8,4 +16,3 @@
 </div>
 
 <h1>Katja Karpac</h1>
-
