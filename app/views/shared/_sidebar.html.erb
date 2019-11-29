@@ -1,19 +1,25 @@
 <!-- _sidebar.html.erb -->
 
 <nav class="sidebar">
+ <div class="sidebar-items">
   <%= link_to root_path do %>
-  <%= image_tag 'logo.svg', class: 'sidebar-logo' %>
+    <%= image_tag 'logo.svg', class: 'sidebar-logo' %>
   <% end %>
   <% if user_signed_in? %>
     <!-- TODO -->
+
     <% if policy(Event).create? %>
 
-     <!-- add alignmnet so they are one on top of the other --->
-      <%= link_to "New Event", new_event_path, class: "nav-link" %>
-    <% end %>
+       <!-- add alignmnet so they are one on top of the other --->
+          <%= link_to "New Event", new_event_path %>
+          <%= link_to "Events", events_path %>
+          <%= link_to "Moments", moments_path %>
+          <%= link_to "Friends", profiles_path %>
+        <% end %>
     <!-- display user avatar (clicking on the avatar takes you to your profile pagee) and edit profile link with log out botton  -->
     <!-- show deyzboard, moments, event  -->
     <% else %>
        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
   <% end %>
+ </div>
 </nav>
