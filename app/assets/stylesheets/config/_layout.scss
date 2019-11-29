@@ -5,3 +5,12 @@
   height: 100vh;
 }
 //
+.profile__edit-page {
+  display: grid;
+  grid-template-rows: 1fer 1fr;
+}
+
+.profile__show {
+  display: grid;
+  grid-template-rows: 1fer 1fr;
+}

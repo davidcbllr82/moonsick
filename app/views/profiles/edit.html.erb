@@ -1,25 +1,34 @@
+<div class="profile__edit-page">
+  <div class="header-container">
+    <h1 class="title-header">Edit your profile</h1>
+    <div class="underline"></div>
+    <h2 class="sub-title">Tell us more about yourself</h2>
+  </div>
+  <%= simple_form_for(current_user, url: profile_path) do |e| %>
+    <div class="form-edit-profile">
+      <%= e.label :username %>
+      <%= e.text_field :username %>
 
 
-<%= simple_form_for(current_user, url: profile_path) do |e| %>
-  <%= e.label :username %>
-  <%= e.text_field :username %>
+    <%= e.input :date_of_birth,
+                as: :date, start_year: Date.today.year - 90,
+                end_year: Date.today.year - 12,
+                discard_day: false,
+                order: [:day, :month, :year] %>
 
+      <%= e.label :location %>
+      <%= e.text_field :location %>
 
-  <%= e.input :date_of_birth, as: :date, start_year: Date.today.year - 90,
-                              end_year: Date.today.year - 12, discard_day: false,
-                              order: [:day, :month, :year] %>
+      <%= e.label :bio %>
+      <%= e.text_field :bio %>
 
-  <%= e.label :location %>
-  <%= e.text_field :location %>
+      <%= e.input :profile_avatar %>
+      <%= e.input :profile_avatar_cache, as: :hidden %>
 
-  <%= e.label :bio %>
-  <%= e.text_field :bio %>
+      <%= e.input :profile_banner %>
+      <%= e.input :profile_banner_cache, as: :hidden %>
 
-  <%= e.input :profile_avatar %>
-  <%= e.input :profile_avatar_cache, as: :hidden %>
-
-  <%= e.input :profile_banner %>
-  <%= e.input :profile_banner_cache, as: :hidden %>
-
-  <%= e.submit %>
-<% end %>
+      <%= e.submit %>
+    <% end %>
+  </div>
+</div>
