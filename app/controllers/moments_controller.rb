@@ -1,4 +1,9 @@
 class MomentsController < ApplicationController
+  def index
+    @moments = Moment.all
+    @moments = policy_scope(Moment)
+  end
+
   def create
     @moment = Moment.new(moment_params)
     authorize @moment

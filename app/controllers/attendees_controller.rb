@@ -9,6 +9,7 @@ class AttendeesController < ApplicationController
 
   def create
     @attendee = Attendee.new
+    authorize @attendee
     @attendee.user = current_user
     @attendee.event = Event.find(params[:event_id])
     @attendee.save

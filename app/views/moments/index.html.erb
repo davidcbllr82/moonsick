@@ -1,7 +1,6 @@
 <!-- display your moments and the moments that have been directly shared to you -->
-<ul>
+
   <% @moments.each do |moment| %>
-    <li> <%= moment.user.email %> </li>
-    <li> <%= moment.content %> </li>  <!-- should be username and avatar -->
+    <%= moment.user.username %>
+    <%= moment.content %> <!-- should be username and avatar -->
   <% end %>
-</ul>
