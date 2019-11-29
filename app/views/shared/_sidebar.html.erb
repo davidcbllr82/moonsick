@@ -12,7 +12,7 @@
     <!-- display user avatar (clicking on the avatar takes you to your profile pagee) and edit profile link with log out botton  -->
        <!-- add alignmnet so they are one on top of the other --->
           <%= link_to "New Event", new_event_path %>
-          <%= link_to "Edit your profile", edit_profile_path %>
+          <%= link_to "Edit your profile", edit_profile_path([:id]) %>
           <%= link_to "Events", events_path %>
           <%= link_to "Moments", moments_path %>
           <%= link_to "Friends", profiles_path %>
