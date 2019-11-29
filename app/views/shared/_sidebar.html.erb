@@ -9,14 +9,15 @@
     <!-- TODO -->
 
     <% if policy(Event).create? %>
-
+    <!-- display user avatar (clicking on the avatar takes you to your profile pagee) and edit profile link with log out botton  -->
        <!-- add alignmnet so they are one on top of the other --->
           <%= link_to "New Event", new_event_path %>
+          <%= link_to "Edit your profile", edit_profile_path %>
           <%= link_to "Events", events_path %>
           <%= link_to "Moments", moments_path %>
           <%= link_to "Friends", profiles_path %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete %>
         <% end %>
-    <!-- display user avatar (clicking on the avatar takes you to your profile pagee) and edit profile link with log out botton  -->
     <!-- show deyzboard, moments, event  -->
     <% else %>
        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
