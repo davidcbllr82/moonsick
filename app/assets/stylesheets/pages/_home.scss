@@ -1,31 +1,38 @@
-// Specific CSS for your home-page
-
-.home-page {
-  display: flex;
-
+.grid-centering {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 .bg-img {
   background-repeat: no-repeat;
   background-size: cover;
-  background: rgba(247, 245, 238, 0.77);
-  opacity: 0.78;
-  backdrop-filter: blur(38px);
 }
 .side-img {
 }
-.title-sign {
-  position: absolute;
-  right: 305px;
-  font-family: Rationale;
-  font-weight: normal;
-  font-size: 30px;
-  margin-top: 40px !important;
+.title-signup,
+.title-login {
+  width: calc(900px / 3);
+  display: inline-block;
 }
-.title-log {
-  position: absolute;
-  right: 100px;
+.title-text {
   font-family: Rationale;
   font-weight: normal;
   font-size: 30px;
-  margin-top: 40px !important;
+}
+.title-underline {
+  width: 90px;
+  height: 7px;
+  margin-top: 10% !important;
+  background: linear-gradient(270deg, #EE6E79 7.16%, #6DC142 100%);
+}
+.titles {
+  width: 900px;
+  font-size: 0;
+}
+.container {
+
+}
+.uk-input {
+  display: inline-block;
 }
