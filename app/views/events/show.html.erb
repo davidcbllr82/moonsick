@@ -31,7 +31,7 @@
 
 <!-- Create and display moments -->
 
-<%= form_for(@moment) do |m| %>
+<%= form_for([@event, @moment]) do |m| %>
   <%= m.label :content %>
   <%= m.text_field :content %>
 
