@@ -2,24 +2,42 @@
 
 <nav class="sidebar">
  <div class="sidebar-items">
-  <%= link_to root_path do %>
-    <%= image_tag 'logo-md.svg', class: 'sidebar-logo' %>
-  <% end %>
   <% if user_signed_in? %>
-    <!-- TODO -->
-
-    <% if policy(Event).create? %>
-    <!-- display user avatar (clicking on the avatar takes you to your profile pagee) and edit profile link with log out botton  -->
-       <!-- add alignmnet so they are one on top of the other --->
-          <%= link_to "New Event", new_event_path %>
-          <%= link_to "Edit your profile", edit_profile_path([:id]) %>
-          <%= link_to "Events", events_path %>
-          <%= link_to "Moments", moments_path %>
-          <%= link_to "Friends", profiles_path %>
-          <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-        <% end %>
-    <!-- show deyzboard, moments, event  -->
-    <% else %>
+    <%= link_to root_path do %>
+      <%= image_tag 'logo-md.svg', class: 'sidebar-logo' %>
+    <% end %>
+    <%= link_to root_path @current_user do %>
+      <%= cl_image_tag current_user.profile_avatar, class: 'avatar-square-sidebar sidebar-items' %>
+    <% end %>
+    <%= link_to root_path @current_user do %>
+      <%= image_tag 'blue-button-sidebar.svg', class: 'sidebar-items' %>
+      Deyzboard
+    <% end %>
+    <%= link_to events_path @current_user do %>
+      <%= image_tag 'green-button-sidebar.svg', class: 'sidebar-items' %>
+      Events
+    <% end %>
+    <%= link_to profiles_path @current_user do %>
+      <%= image_tag 'purple-button-sidebar.svg', class: 'sidebar-items' %>
+      Friends
+    <% end %>
+    <%= link_to moments_path @current_user do %>
+      <%= image_tag 'red-button-sidebar.svg', class: 'sidebar-items' %>
+      Moments
+    <% end %>
+    <%= link_to new_event_path do %>
+      <%= image_tag 'wisdom.png', class: 'sidebar-items' %>
+      Create Event
+    <% end %>
+    <%= link_to edit_profile_path(current_user) do %>
+      <%= image_tag 'stressed.png', class: 'sidebar-items' %>
+      Edit
+    <% end %>
+    <%= link_to destroy_user_session_path, method: :delete do %>
+      <%= image_tag 'wisdom.png', class: 'sidebar-items' %>
+      Log out
+    <% end %>
+  <% else %>
        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
   <% end %>
  </div>
