@@ -10,4 +10,7 @@ class Event < ApplicationRecord
   mount_uploader :banner, PhotoUploader
   mount_uploader :event_avatar, PhotoUploader
 
+  def spotify_playlist_id
+    spotify_uri[/[^:]*$/]
+  end
 end
