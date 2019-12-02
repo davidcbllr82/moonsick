@@ -35,7 +35,7 @@
     </script>
   </head>
 
-  <body class="layout-primary">
+  <body class="layout-primary <%= user_signed_in? ? 'layout-primary-active': '' %>">
     <%= render 'shared/sidebar' %>
         <%= yield %>
     <%= javascript_include_tag 'application' %>

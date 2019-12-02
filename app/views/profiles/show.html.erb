@@ -1,18 +1,32 @@
+<div>
 
+  <div class="profile-banner" style="background-image: url(<%= cl_image_path @profile.profile_banner %>)">
 
-<%= @profile.username %>
-<%= @profile.date_of_birth %>
-<%= @profile.location %>
-<%= @profile.bio %>
+    <div class="profile-information">
 
-<%= cl_image_tag @profile.profile_avatar, height: 100, width: 100 %>
-<%= cl_image_tag @profile.profile_banner, height: 100, width: 100 %>
+      <%= cl_image_tag @profile.profile_avatar, class: "avatar-square-profile" %>
 
-<%-# here a profile is displayed  -%>
-<%-# if the record.user == user display edit options if not its just a view of the person using it -%>
+      <div class="personal-info">
+        <h2>BIO</h2>
 
-<div class="avatar-square-profile">
+        <div class="overflow-scroll-gradient__scroller">
+          <div class="overflow-scroll-gradient">
+            <p><%= @profile.bio %></p>
+          </div>
+        </div>
 
+        <ul class="personal-data">
+          <li class="dob-user"><%= @profile.date_of_birth %></li>
+          <li class="loc-user"><%= @profile.location %></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="profile-passport">
+      <h1><%= @profile.username %></h1>
+    </div>
+  </div>
 </div>
 
-<h1>Katja Karpac hihi</h1>
+
+
