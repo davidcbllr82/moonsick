@@ -1,8 +1,7 @@
-// Specific CSS for your home-page
+// home-page-profile#show-profile#edit
 
 // ======================== > > Devise/registrations#new
-
-// ======================== > > Devise/sesionsa#new
+// ======================== > > Devise/sesions#new
 .home-page {
   display: flex;
 }
@@ -34,41 +33,43 @@
   background: linear-gradient(270deg, #EE6E79 7.16%, #6DC142 100%);
 }
 
-// ======================================== > Profiles#edit
+// ============================= > Profiles#edit
 
 .profile__edit-page {
   display: grid;
   grid-template-rows: 1fer 1fr;
 }
+
 .header-container {
   font-family: Rationale;
   margin-top: 61px;
   margin-left: 100px;
   margin-bottom: 117px;
 }
+
 .title-header,
 .sub-title {
   font-family: Rationale;
 }
+
 .title-header {
   font-size: 60px;
 }
+
 .sub-title {
   font-size: 30px;
 }
+
 .underline {
   width: 405px;
   height: 10px;
   background: #F1B042;
 }
-
-.container {
-
-}
 .uk-input {
   display: inline-block;
 }
-// ======================================== > Profiles#show
+// ============================= > Profiles#show
+
 .profile-banner {
   display: flex;
   justify-content: space-between;
@@ -85,43 +86,83 @@
   }
 }
 
-.username {
-  font-family: Scada;
-  font-weight: 400;
-  font-size: 80px;
-}
-.dob-user {
-
-}
-.loc-user {
-
-}
-
-.overflow-scroll-gradient {
-  position: relative;
-}
-
-.overflow-scroll-gradient::after {
-  content: '';
+.profile-name {
   position: absolute;
-  bottom: 0;
+  left: 650px;
+  top: 40px;
+  font-family: Scada;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 80px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.overflow-scroll__scroller {
+  overflow-y: scroll;
   width: 530px;
-  height: 140px;
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.001),
-    white
-  ); /* transparent keyword is broken in Safari */
-  pointer-events: none;
+  height: 90px;
+  line-height: 1.5;
 }
 
-.overflow-scroll-gradient__scroller {
-  overflow-y: hidden;
-  overflow-x: hidden;
-  width: 530px;
-  height: 140px;
-  padding: 15px;
-  line-height: 1.2;
+.profile-elements {
+  display: flex;
 }
+
+.visor-header {
+  position: relative;
+  background-color: #429ADD;
+  height: 40px;
+  width: 600px;
+}
+
+.visor-events,
+.visor-moments {
+  margin-top: 35px;
+  margin-left: 70px;
+  height: 210px;
+  width: 600px;
+  background-color: #0E1732;
+
+}
+
+.visor-top-songs {
+  position: absolute;
+  width: 600px;
+  height: 594px;
+  right: 70px;
+  top: 230px;
+  background: linear-gradient(179.95deg, #0E1732 70.92%, rgba(14, 23, 50, 0) 97.26%);
+}
+
+.visor-txt {
+  position: absolute;
+  top: 30%;
+  margin-left: 15px;
+  font-family: Rationale;
+  font-size: 15px;
+  color: white;
+  letter-spacing: 4px;
+}
+
+.dog-bot {
+  margin-right: 20px;
+}
+
+.visor-logo {
+  margin: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
