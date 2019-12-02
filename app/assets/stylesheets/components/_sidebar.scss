@@ -9,9 +9,10 @@
 .sidebar-items {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
+  flex-wrap: no-wrap;
   justify-content: flex-start;
-  align-content: stretch;
+  align-content: center;
   align-items: flex-start;
 }
+
 
