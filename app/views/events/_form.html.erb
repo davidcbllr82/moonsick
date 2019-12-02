@@ -10,6 +10,8 @@
   <%= f.label :description %>
   <%= f.text_field :description %>
 
+  <%= f.input :scheduled_at, as: :datetime, html5: true %>
+
   <!-- photo for event avatar -->
   <%= f.input :banner %>
   <%= f.input :banner_cache, as: :hidden %>

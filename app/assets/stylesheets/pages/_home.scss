@@ -14,14 +14,12 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .links {
   display: flex;
   justify-content: flex-end;
   padding: 16px;
   width: 100%;
 }
-
 .title-text {
   font-family: Rationale;
   font-weight: normal;
@@ -32,34 +30,27 @@
   height: 7px;
   background: linear-gradient(270deg, #EE6E79 7.16%, #6DC142 100%);
 }
-
 // ============================= > Profiles#edit
-
 .profile__edit-page {
   display: grid;
   grid-template-rows: 1fer 1fr;
 }
-
 .header-container {
   font-family: Rationale;
   margin-top: 61px;
   margin-left: 100px;
   margin-bottom: 117px;
 }
-
 .title-header,
 .sub-title {
   font-family: Rationale;
 }
-
 .title-header {
   font-size: 60px;
 }
-
 .sub-title {
   font-size: 30px;
 }
-
 .underline {
   width: 405px;
   height: 10px;
@@ -68,16 +59,23 @@
 .uk-input {
   display: inline-block;
 }
-// ============================= > Profiles#show
-
+// ============================= > Profiles#show / Events#show
 .profile-banner {
   display: flex;
   justify-content: space-between;
   padding: 60px;
-  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 306px;
 }
-
+.event-banner {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 306px;
+}
 .profile-information {
   display: flex;
 
@@ -85,8 +83,25 @@
     padding: 0 20px;
   }
 }
+.event-details {
+  display: flex;
 
+  .event-info {
+    padding: 0 20px;
+  }
+}
 .profile-name {
+  position: absolute;
+  left: 650px;
+  top: 40px;
+  font-family: Scada;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 80px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.event-name {
   position: absolute;
   left: 650px;
   top: 40px;
@@ -103,18 +118,15 @@
   height: 90px;
   line-height: 1.5;
 }
-
 .profile-elements {
   display: flex;
 }
-
 .visor-header {
   position: relative;
   background-color: #429ADD;
   height: 40px;
   width: 600px;
 }
-
 .visor-events,
 .visor-moments {
   margin-top: 35px;
@@ -122,9 +134,15 @@
   height: 210px;
   width: 600px;
   background-color: #0E1732;
-
 }
-
+.visor-playlist-header {
+  position: relative;
+  background-color: #429ADD;
+  height: 40px;
+  width: 500px;
+  bottom: 0;
+  z-index: 1;
+}
 .visor-top-songs {
   position: absolute;
   width: 600px;
@@ -133,7 +151,6 @@
   top: 230px;
   background: linear-gradient(179.95deg, #0E1732 70.92%, rgba(14, 23, 50, 0) 97.26%);
 }
-
 .visor-txt {
   position: absolute;
   top: 30%;
@@ -142,6 +159,12 @@
   font-size: 15px;
   color: white;
   letter-spacing: 4px;
+}
+.visor-multimedia-footer {
+  position: absolute;
+  width: 600px;
+  bottom: 0;
+  background-color: #4A27B7;
 }
 
 .dog-bot {
