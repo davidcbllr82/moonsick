@@ -35,4 +35,7 @@
 
 
 
-
+<%= simple_form_for([@profile, @friendship]) do |f| %>
+  <%= f.button :submit %>
+<% end %>
+<%= @friendships %>

@@ -9,5 +9,8 @@ Rails.application.routes.draw do
   resources :moments, only: [:index]
   resources :profiles, only: [:index, :show, :edit, :update]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :users, only: [] do
+    resources :friendships, only: :create
+  end
 end
 
