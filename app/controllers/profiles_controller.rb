@@ -8,6 +8,8 @@ class ProfilesController < ApplicationController
   end
 
   def show
+    @friendship = Friendship.new
+    @friendships = @profile.friendships_as_receiver.count
   end
 
   def edit

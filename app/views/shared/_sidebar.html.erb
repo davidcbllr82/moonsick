@@ -6,7 +6,7 @@
     <%= link_to root_path do %>
       <%= image_tag 'logo-md.svg', class: 'sidebar-logo' %>
     <% end %>
-    <%= link_to root_path @current_user do %>
+    <%= link_to profile_path(current_user) do %>
       <%= cl_image_tag current_user.profile_avatar, class: 'avatar-square-sidebar sidebar-items' %>
     <% end %>
     <%= link_to root_path @current_user do %>
