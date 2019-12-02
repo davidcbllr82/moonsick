@@ -1,5 +1,4 @@
 <div>
-
   <div class="profile-banner" style="background-image: url(<%= cl_image_path @profile.profile_banner %>)">
 
     <div class="profile-information">
@@ -8,25 +7,32 @@
 
       <div class="personal-info">
         <h2>BIO</h2>
-
-        <div class="overflow-scroll-gradient__scroller">
-          <div class="overflow-scroll-gradient">
-            <p><%= @profile.bio %></p>
-          </div>
-        </div>
-
-        <ul class="personal-data">
-          <li class="dob-user"><%= @profile.date_of_birth %></li>
-          <li class="loc-user"><%= @profile.location %></li>
+        <ul class="personal-data list-inline">
+          <li class="dob-user list-inline-item"><%= @profile.date_of_birth %>, </li>
+          <li class="loc-user list-inline-item"><%= @profile.location %></li>
         </ul>
+        <div class="overflow-scroll__scroller">
+          <%= @profile.bio %>
+        </div>
       </div>
     </div>
-
     <div class="profile-passport">
-      <h1><%= @profile.username %></h1>
+      <h1 class="profile-name"><%= @profile.username %></h1>
+      <%= image_tag 'doggy-stars', class: "dog-bot" %>
     </div>
   </div>
+  <div class="visor-moments">
+    <div class="visor-header"><p class="visor-txt"><%= @profile.username %>' moments</p></div>
+  </div>
+  <div class="visor-events">
+    <div class="visor-header"><p class="visor-txt"><%= @profile.username %>' events</p></div></div>
+  </div>
+  <div class="visor-top-songs">
+    <div class="visor-header"><p class="visor-txt"><%= @profile.username %>' Top Songs</p></div>
+      <%= image_tag 'logo', class: "visor-logo" %>
+  </div>
 </div>
+
 
 
 
