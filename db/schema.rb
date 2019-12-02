@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_02_115257) do
+ActiveRecord::Schema.define(version: 2019_12_02_141348) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,15 @@ ActiveRecord::Schema.define(version: 2019_12_02_115257) do
     t.string "spotify_uri"
     t.index ["playlist_id"], name: "index_events_on_playlist_id"
     t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
+  create_table "friendships", force: :cascade do |t|
+    t.bigint "asker_id"
+    t.bigint "receiver_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["asker_id"], name: "index_friendships_on_asker_id"
+    t.index ["receiver_id"], name: "index_friendships_on_receiver_id"
   end
 
   create_table "moments", force: :cascade do |t|
@@ -82,6 +91,8 @@ ActiveRecord::Schema.define(version: 2019_12_02_115257) do
   add_foreign_key "attendees", "users"
   add_foreign_key "events", "playlists"
   add_foreign_key "events", "users"
+  add_foreign_key "friendships", "users", column: "asker_id"
+  add_foreign_key "friendships", "users", column: "receiver_id"
   add_foreign_key "moments", "events"
   add_foreign_key "moments", "users"
   add_foreign_key "playlists", "users"

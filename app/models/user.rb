@@ -10,4 +10,7 @@ class User < ApplicationRecord
 
   mount_uploader :profile_banner, PhotoUploader
   mount_uploader :profile_avatar, PhotoUploader
+
+  has_many :friendships_as_asker, source: :friendships, foreign_key: :asker_id
+  has_many :friendships_as_receiver, source: :friendships, foreign_key: :receiver_id
 end
