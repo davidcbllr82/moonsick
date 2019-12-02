@@ -44,7 +44,5 @@
 <% end %>
 
 
-<!-- display embeded player -->
-<%#= @event.embeded_player.html_safe %>
-<%#= spotify_embed_player('3U9lafWEnb3uP6JFbI65uq') %>
-<%#= spotify_embed_player(@event.spotify_playlist_id) %>
+
+<%= spotify_embed_player(@event.spotify_playlist_id) %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_02_111109) do
+ActiveRecord::Schema.define(version: 2019_12_02_115257) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2019_12_02_111109) do
     t.string "event_avatar"
     t.bigint "playlist_id"
     t.string "embeded_player"
-    t.string "spotify_playlist_id"
+    t.string "spotify_uri"
     t.index ["playlist_id"], name: "index_events_on_playlist_id"
     t.index ["user_id"], name: "index_events_on_user_id"
   end

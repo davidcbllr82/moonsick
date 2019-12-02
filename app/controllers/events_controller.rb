@@ -54,7 +54,7 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:title, :description, :event_avatar, :event_avatar_cache, :banner, :banner_cache, :embeded_player)
+    params.require(:event).permit(:title, :description, :event_avatar, :event_avatar_cache, :banner, :banner_cache, :embeded_player, :spotify_uri)
   end
 
   def find_event
