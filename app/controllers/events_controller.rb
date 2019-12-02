@@ -13,6 +13,9 @@ class EventsController < ApplicationController
     # create a new moment and display the ones for the event
     @moment = Moment.new
     @moments = @event.moments
+
+    # create and display playlist
+    @playlist = @event.playlist_id
   end
 
   def new
@@ -29,6 +32,10 @@ class EventsController < ApplicationController
     else
       render :new
     end
+
+    # create a playlist
+    @playlist = Playlist.new
+    @playlist.save
   end
 
   def edit
@@ -47,7 +54,7 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:title, :description, :event_avatar, :event_avatar_cache, :banner, :banner_cache)
+    params.require(:event).permit(:title, :description, :event_avatar, :event_avatar_cache, :banner, :banner_cache, :embeded_player)
   end
 
   def find_event
