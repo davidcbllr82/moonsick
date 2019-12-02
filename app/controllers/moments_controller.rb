@@ -8,7 +8,7 @@ class MomentsController < ApplicationController
     @moment = Moment.new(moment_params)
     authorize @moment
     @moment.user = current_user
-    @moment.event = Event.find(params[:id])
+    @moment.event = Event.find(params[:event_id])
     @moment.save
     redirect_to event_path(Event.find(params[:event_id]))
   end
