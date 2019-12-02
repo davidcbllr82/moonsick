@@ -11,7 +11,6 @@ class Event < ApplicationRecord
   mount_uploader :event_avatar, PhotoUploader
 
   def spotify_playlist_id
-    a = spotify_uri
-    a[/[^:]*$/]
+    spotify_uri[/[^:]*$/]
   end
 end
