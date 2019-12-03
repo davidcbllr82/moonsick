@@ -26,14 +26,13 @@
   </div>
 
   <div class="visor-moments">
-    <div class="visor-header"><p class="visor-txt"><%= @profile.username %>' moments</p></div>
+    <div class="visor-header-moments"><p class="visor-txt"><%= @profile.username %>' moments</p></div>
   </div>
   <div class="visor-events">
-    <div class="visor-header"><p class="visor-txt"><%= @profile.username %>' events</p></div>
+    <div class="visor-header-events"><p class="visor-txt"><%= @profile.username %>' events</p></div>
   </div>
   <div class="visor-top-songs">
-    <div class="visor-header"><p class="visor-txt"><%= @profile.username %>' Top Songs</p></div>
-      <%= image_tag 'logo.svg', class: "visor-logo" %>
+    <div class="visor-header-top-songs"><p class="visor-txt"><%= @profile.username %>' Top Songs</p></div>
       <div class="carousel" data-flickity='{ "autoPlay": true, "wrapAround": true}'>
             <div class="carousel-cell">
               <% if @profile.spotify_top_1.present? %>

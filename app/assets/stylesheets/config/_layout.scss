@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: 115px 1fr;
   height: 100vh;
+  background-color: #F7F5EE;
 
   &-active{
     grid-template-columns: 180px 1fr;

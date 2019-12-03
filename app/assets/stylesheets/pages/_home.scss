@@ -90,10 +90,11 @@
   display: flex;
 
   .personal-info {
+    margin-top: 20px;
     padding: 0 20px;
     height: 180px;
-    background-color: rgba(14, 23, 50,0.5);
-    backdrop-filter: blur(21px);
+    background: rgba(250,233,235, 0.3);
+    backdrop-filter: blur(15px);
   }
 }
 .loc-user {
@@ -108,8 +109,8 @@
 }
 .profile-name {
   position: absolute;
-  right: 200px;
-  top: 40px;
+  right: 180px;
+  top: 120px;
   font-family: Scada;
   font-style: normal;
   font-weight: normal;
@@ -131,28 +132,41 @@
 .overflow-scroll__scroller {
   overflow-y: scroll;
   width: 470px;
-  height: 80px;
+  height: 100px;
   margin-right: 10px;
   line-height: 1.5;
-  color: #ffffff;
+  color: black;
 }
 .profile-elements {
   display: flex;
 }
-.visor-header {
+.visor-header-events {
   position: relative;
-  background-color: #429ADD;
+  background-color: #6DC142;
   height: 40px;
-  width: 600px;
+  width: 700px;
+}
+.visor-header-moments {
+  position: relative;
+  background-color: #EE6E79;
+  height: 40px;
+  width: 700px;
+}
+.visor-header-top-songs {
+  position: relative;
+  background-color: #F1B042;
+  height: 40px;
+  width: 700px;
 }
 .visor-events,
 .visor-moments {
-  margin-top: 35px;
-  margin-left: 70px;
+  margin-top: 45px;
+  margin-left: -30px;
   height: 210px;
-  width: 600px;
-  background-color: #0E1732;
-  box-shadow: 10px 18px 27px -2px rgba(0,0,0,.3);
+  width: 700px;
+  background: linear-gradient(to bottom, #0e1732 0%, #4a27b7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e1732', endColorstr='#4a27b7',GradientType=0 );
+  box-shadow: 16px -2px 41px -15px rgba(0,0,0,.3);
 }
 .visor-playlist-header {
   position: relative;
@@ -164,12 +178,13 @@
 }
 .visor-top-songs {
   position: absolute;
-  width: 600px;
-  height: 594px;
-  right: 70px;
-  top: 230px;
-  background: linear-gradient(179.95deg, #0E1732 70.92%, rgba(14, 23, 50, 0) 97.26%);
-  box-shadow: 10px 18px 27px -2px rgba(0,0,0,.3);
+  width: 700px;
+  height: 465px;
+  right: 40px;
+  top: 350px;
+  background: linear-gradient(to bottom, #0e1732 0%, #4a27b7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e1732', endColorstr='#4a27b7',GradientType=0 );
+  box-shadow: 16px -2px 41px -15px rgba(0,0,0,.3);
 }
 .visor-txt {
   position: absolute;
@@ -222,18 +237,19 @@
   position: absolute;
   width: 608px;
   height: 562px;
-  right: 100px;
-  top: 200px;
-  background: #0E1732;
-  box-shadow: 10px 10px 10px rgba(119, 111, 111, 0.25);
+  left: 700px;
+  top: -100px;
+  background: linear-gradient(to bottom, #0e1732 0%, #4a27b7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e1732', endColorstr='#4a27b7',GradientType=0 );
+  box-shadow: 16px -2px 41px -15px rgba(0,0,0,.3);
   border-radius: 10px;
 }
 .visor-musicplayer {
   position: absolute;
   width: 608px;
   height: 60px;
-  right: 100px;
-  top: 160px;
+  left: 700px;
+  top: -100px;
   font-family: Rationale;
   font-style: normal;
   font-weight: normal;
@@ -242,13 +258,14 @@
   /* or 30px */
   display: flex;
   align-items: center;
-  background: #429ADD;
+  background: #0E1732;
   color: #FFFFFF;
   z-index: 100;
   border-radius: 10px 10px 0px 0px;
 }
 .visor-list-event {
-
+  background: linear-gradient(to bottom, #0e1732 0%, #4a27b7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e1732', endColorstr='#4a27b7',GradientType=0 );
 }
 .list-group-item {
   width: 311px;
@@ -259,7 +276,6 @@
   background: #212123;
   border-radius: 5px;
 }
-
 
 
 
