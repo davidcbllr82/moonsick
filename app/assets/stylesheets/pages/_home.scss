@@ -209,7 +209,7 @@
   box-shadow: 10px 10px 10px rgba(126, 117, 117, 0.25);
   border-radius: 0px 0px 10px 10px;
 }
-.visor-header-index {
+.visor-list-header {
   position: relative;
   width: 377px;
   height: 60px;
@@ -222,8 +222,8 @@
   position: absolute;
   width: 608px;
   height: 562px;
-  left: 650px;
-  top: -70px;
+  right: 100px;
+  top: 200px;
   background: #0E1732;
   box-shadow: 10px 10px 10px rgba(119, 111, 111, 0.25);
   border-radius: 10px;
@@ -232,8 +232,8 @@
   position: absolute;
   width: 608px;
   height: 60px;
-  left: 650px;
-  top: -100px;
+  right: 100px;
+  top: 160px;
   font-family: Rationale;
   font-style: normal;
   font-weight: normal;
@@ -247,7 +247,18 @@
   z-index: 100;
   border-radius: 10px 10px 0px 0px;
 }
+.visor-list-event {
 
+}
+.list-group-item {
+  width: 311px;
+  height: 59px;
+  display: flex;
+  align-items: center;
+  color: white;
+  background: #212123;
+  border-radius: 5px;
+}
 
 
 
