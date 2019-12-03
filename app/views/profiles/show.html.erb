@@ -34,29 +34,37 @@
   <div class="visor-top-songs">
     <div class="visor-header"><p class="visor-txt"><%= @profile.username %>' Top Songs</p></div>
       <%= image_tag 'logo.svg', class: "visor-logo" %>
+      <div class="carousel" data-flickity='{ "autoPlay": true, "wrapAround": true}'>
+            <div class="carousel-cell">
+              <% if @profile.spotify_top_1.present? %>
+                <%= spotify_song(@profile.spotify_top_1_uid) %>
+              <% end %>
+            </div>
+
+            <div class="carousel-cell">
+              <% if @profile.spotify_top_2.present? %>
+                <%= spotify_song(@profile.spotify_top_2_uid) %>
+              <% end %>
+            </div>
+
+            <div class="carousel-cell">
+              <% if @profile.spotify_top_3.present? %>
+                <%= spotify_song(@profile.spotify_top_3_uid) %>
+              <% end %>
+            </div>
+
+            <div class="carousel-cell">
+              <% if @profile.spotify_top_4.present? %>
+                <%= spotify_song(@profile.spotify_top_4_uid) %>
+              <% end %>
+            </div>
+
+            <div class="carousel-cell">
+              <% if @profile.spotify_top_5.present? %>
+                <%= spotify_song(@profile.spotify_top_5_uid) %>
+              <% end %>
+            </div>
+      </div>
+
   </div>
 </div>
-
-<% if @profile.spotify_top_1.present? %>
-  <%= spotify_song(@profile.spotify_top_1_uid) %>
-<% end %>
-
-
-<% if @profile.spotify_top_2.present? %>
-  <%= spotify_song(@profile.spotify_top_2_uid) %>
-<% end %>
-
-
-<% if @profile.spotify_top_3.present? %>
-  <%= spotify_song(@profile.spotify_top_3_uid) %>
-<% end %>
-
-
-<% if @profile.spotify_top_4.present? %>
-  <%= spotify_song(@profile.spotify_top_4_uid) %>
-<% end %>
-
-
-<% if @profile.spotify_top_5.present? %>
-  <%= spotify_song(@profile.spotify_top_5_uid) %>
-<% end %>
