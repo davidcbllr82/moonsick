@@ -9,6 +9,7 @@
 
 # generate 50 profiles
 
+
 p "Creating 50 profiles"
 
 50.times do |u|
@@ -31,3 +32,23 @@ p "Creating 50 profiles"
 end
 
 p "Here is 50 new profiles"
+
+
+p "Creating 50 events"
+
+
+
+50.times do |e|
+  event = Event.new(
+    title: Faker::Music.unique.album,
+    description: Faker::TvShows::SiliconValley.quote,
+    scheduled_at: DateTime.now + (rand * 50)
+     )
+  event.user_id = rand(1..50)
+  event.remote_banner_url = "https://source.unsplash.com/random/?lights"
+  event.remote_event_avatar_url = "https://source.unsplash.com/random/?art"
+  event.spotify_uri = "spotify:playlist:37i9dQZF1DX5wcoyvtNnP4"
+  event.save
+end
+
+p "Your events are done!"
