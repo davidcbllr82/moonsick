@@ -61,17 +61,27 @@
 }
 // ============================= > Profiles#show / Events#show
 .profile-banner {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: justify;
   justify-content: space-between;
-  padding: 60px;
+  padding: 50px;
+  left: -80px;
+  position: relative;
+  width: 105%;
   background-size: cover;
   background-repeat: no-repeat;
   height: 306px;
 }
 .event-banner {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: justify;
   justify-content: space-between;
-  padding: 60px;
+  padding: 50px;
+  left: -80px;
+  position: relative;
+  width: 105%;
   background-size: cover;
   background-repeat: no-repeat;
   height: 306px;
