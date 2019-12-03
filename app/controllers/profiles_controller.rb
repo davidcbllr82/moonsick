@@ -25,7 +25,7 @@ class ProfilesController < ApplicationController
   private
 
   def profile_params
-    params.require(:user).permit(:username, :location, :bio, :date_of_birth, :profile_avatar, :profile_avatar_cache, :profile_banner, :profile_banner_cache)
+    params.require(:user).permit(:username, :location, :bio, :date_of_birth, :profile_avatar, :profile_avatar_cache, :profile_banner, :profile_banner_cache, :spotify_top_1, :spotify_top_2, :spotify_top_3, :spotify_top_4, :spotify_top_5)
   end
 
   def set_profile
