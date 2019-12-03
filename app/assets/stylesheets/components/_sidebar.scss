@@ -9,7 +9,7 @@
 .container-sidebar {
   display: flex;
   flex-direction: column;
-  top: 0px;
+  padding-top: 100px;
   height: 100vh;
 }
 .sidebar-items,
@@ -20,11 +20,12 @@
   flex-direction: column;
   flex-wrap: no-wrap;
   margin-bottom: 25px;
-  justify-content: flex-start;
+  justify-content: center;
   align-content: center;
   align-items: center;
+
 }
 .side-bar-logo {
   position: absolute;
-  top: -20px;
+  top: 30px;
 }

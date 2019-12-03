@@ -186,16 +186,67 @@
   bottom: 0;
   background-color: #4A27B7;
 }
-.dog-bot {
-  margin-left: 30px;
+.dogbot {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  width: 80px;
+  height: 80px;
+  z-index: 100;
 }
 
 .visor-logo {
   margin: 15px;
 }
-
-
-
+// ============================= > Index__pages
+.visor-list {
+  position: absolute;
+  width: 377px;
+  height: 477px;
+  left: 226px;
+  top: 277px;
+  background: #F7F5EE;
+  box-shadow: 10px 10px 10px rgba(126, 117, 117, 0.25);
+  border-radius: 0px 0px 10px 10px;
+}
+.visor-header-index {
+  position: relative;
+  width: 377px;
+  height: 60px;
+  left: 0px;
+  top:-30px;
+  background: #0E1732;
+  border-radius: 10px 10px 0px 0px;
+}
+.visor-particles {
+  position: absolute;
+  width: 608px;
+  height: 562px;
+  left: 650px;
+  top: -70px;
+  background: #0E1732;
+  box-shadow: 10px 10px 10px rgba(119, 111, 111, 0.25);
+  border-radius: 10px;
+}
+.visor-musicplayer {
+  position: absolute;
+  width: 608px;
+  height: 60px;
+  left: 650px;
+  top: -100px;
+  font-family: Rationale;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 151.3%;
+  /* or 30px */
+  display: flex;
+  align-items: center;
+  background: #429ADD;
+  color: #FFFFFF;
+  z-index: 100;
+  border-radius: 10px 10px 0px 0px;
+}
 
 
 
