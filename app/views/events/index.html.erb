@@ -1,26 +1,21 @@
 <div class="layout__edit__create-page">
+
   <div class="header-container">
     <h1 class="title-header">Events</h1>
     <p class="hover-underline-animation"></p>
   </div>
 </div>
 <div class="layout__index-page">
-
-  <div class="visor-list text-center">
-    <div class="visor-list-header"></div>
-    <div class="visor-list-event">
-    <div class="list-group>">
+  <div class="visor-list">
+    <div class="visor-header-index">
       <% @events.each do |e| %>
-        <div class="d-flex w-100 justify-content-between">
-          <small><%= link_to e.created_at, event_path(e) %></small>
-          <%= link_to e.title, event_path(e), class: "list-group-item list-group-item-action flex-column align-items-start active" %>
-          <h5 class="mb-1"><%= e.description %></h5>
-        </div>
-    </div>
+      <div class="event-card">
+        <%= link_to e.title, event_path(e) %>
+        <%= e.scheduled_at.strftime('%a %b %y %l %M %p') %>
+        <%= cl_image_tag(e.event_avatar, :width=>50, :height=>50, :crop=>"scale")%>
+      </div>
       <% end %>
     </div>
-  </div>
-
   <div class="visor-musicplayer">
     <%= image_tag 'icon-play-yellow.svg', class: 'play-yellow' %>
   </div>
