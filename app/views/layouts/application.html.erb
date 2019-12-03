@@ -37,6 +37,7 @@
 
   <body class="layout-primary <%= user_signed_in? ? 'layout-primary-active': '' %>">
     <%= render 'shared/sidebar' %>
+    <%= render 'shared/dogbot' %>
         <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>

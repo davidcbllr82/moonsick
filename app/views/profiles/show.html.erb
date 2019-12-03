@@ -18,7 +18,6 @@
 
     <div class="profile-passport">
       <h1 class="profile-name"><%= @profile.username %></h1>
-      <%= image_tag 'doggy-stars.svg', class: "dog-bot" %>
       <%= simple_form_for([@profile, @friendship]) do |f| %>
         <%= f.button :submit %>
       <% end %>

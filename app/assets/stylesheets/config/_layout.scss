@@ -8,8 +8,15 @@
     grid-template-columns: 180px 1fr;
   }
 }
-// PROFILE__EDIT
-.profile__edit-page {
+// PROFILE__EDIT, EVENT__EDIT, PROFILE__CREATE, EVENT__CREATE //
+.layout__edit__create-page {
   display: grid;
-  grid-template-rows: 1fer 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+// EVENTS__INDEX, FRIENDS__INDEX__MOMENTS_INDEX //
+
+.layout__index-page {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
 }
