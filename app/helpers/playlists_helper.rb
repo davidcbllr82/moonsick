@@ -10,4 +10,16 @@ module PlaylistsHelper
                allow: "encrypted-media"
     # "<iframe src= width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>"
   end
+
+  def spotify_song(spotify_uid)
+    url = "https://open.spotify.com/embed/track/#{spotify_uid}"
+
+    tag.iframe src: url,
+               width:300,
+               height: 380,
+               frameborder: 0,
+               allowtransparency: true,
+               allow: "encrypted-media"
+    #<iframe src= width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  end
 end
