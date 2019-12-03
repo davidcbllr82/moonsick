@@ -6,9 +6,7 @@
       <%= cl_image_tag @profile.profile_avatar, class: "avatar-square-profile" %>
 
       <div class="personal-info">
-        <h2>BIO</h2>
         <ul class="personal-data list-inline">
-          <li class="dob-user list-inline-item"><%= @profile.date_of_birth %>, </li>
           <li class="loc-user list-inline-item"><%= @profile.location %></li>
         </ul>
 
@@ -21,6 +19,10 @@
     <div class="profile-passport">
       <h1 class="profile-name"><%= @profile.username %></h1>
       <%= image_tag 'doggy-stars.svg', class: "dog-bot" %>
+      <%= simple_form_for([@profile, @friendship]) do |f| %>
+        <%= f.button :submit %>
+      <% end %>
+      <%= @friendships %>
     </div>
   </div>
 
@@ -35,10 +37,3 @@
       <%= image_tag 'logo.svg', class: "visor-logo" %>
   </div>
 </div>
-
-
-
-<%= simple_form_for([@profile, @friendship]) do |f| %>
-  <%= f.button :submit %>
-<% end %>
-<%= @friendships %>
