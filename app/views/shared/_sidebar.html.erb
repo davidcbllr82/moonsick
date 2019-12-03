@@ -1,46 +1,62 @@
 <!-- _sidebar.html.erb -->
 
 <nav class="sidebar">
- <div class="sidebar-items">
-  <% if user_signed_in? %>
-    <%= link_to root_path do %>
-      <%= image_tag 'logo-md.svg', class: 'sidebar-logo' %>
+  <div class="container-sidebar text-center">
+    <% if user_signed_in? %>
+      <lu class="sidebar-items">
+        <li class="sidebar-items">
+          <%= link_to root_path do %>
+            <%= image_tag 'logo-md.svg', class: 'sidebar-logo' %>
+          <% end %>
+       </li>
+       <li class="sidebar-items">
+          <%= link_to profile_path(current_user) do %>
+            <%= cl_image_tag current_user.profile_avatar, class: 'avatar-square-sidebar' %>
+          <% end %>
+       </li>
+       <li class="sidebar-items">
+          <%= link_to root_path @current_user do %>
+            <%= image_tag 'blue-button-sidebar.svg', class: 'sidebar-items' %>
+          <% end %>
+       </li>
+        <li class="sidebar-items">
+          <%= link_to events_path @current_user do %>
+            <%= image_tag 'green-button-sidebar.svg', class: 'sidebar-items' %>
+          <% end %>
+       </li>
+        <li class="sidebar-items">
+          <%= link_to profiles_path @current_user do %>
+            <%= image_tag 'purple-button-sidebar.svg', class: 'sidebar-items' %>
+          <% end %>
+       </li>
+        <li class="sidebar-items">
+          <%= link_to moments_path @current_user do %>
+            <%= image_tag 'red-button-sidebar.svg', class: 'sidebar-items' %>
+          <% end %>
+       </li>
+        <li class="sidebar-items">
+          <%= link_to new_event_path do %>
+            <%= image_tag 'icon-create-event', class: 'icon sidebar-items' %>
+          <% end %>
+        </li>
+        <li class="sidebar-items">
+          <%= link_to edit_profile_path(current_user) do %>
+            <%= image_tag 'icon-edit.svg', class: 'icon sidebar-items' %>
+          <% end %>
+        </li>
+        <li class="sidebar-items">
+          <%= link_to destroy_user_session_path, method: :delete do %>
+            <%= image_tag 'icon-logout.svg', class: 'icon sidebar-items' %>
+          <% end %>
+        </li>
+        <li class="sidebar-items">
+          <input type="checkbox" id="toggle" class="offscreen"/><label for="toggle" class="switch"></label>
+        </li>
+        </lu>
+    <% else %>
+      <%= link_to "Login", new_user_session_path, class: "nav-link" %>
     <% end %>
-    <%= link_to profile_path(current_user) do %>
-      <%= cl_image_tag current_user.profile_avatar, class: 'avatar-square-sidebar sidebar-items' %>
-    <% end %>
-    <%= link_to root_path @current_user do %>
-      <%= image_tag 'blue-button-sidebar.svg', class: 'sidebar-items' %>
-      Deyzboard
-    <% end %>
-    <%= link_to events_path @current_user do %>
-      <%= image_tag 'green-button-sidebar.svg', class: 'sidebar-items' %>
-      Events
-    <% end %>
-    <%= link_to profiles_path @current_user do %>
-      <%= image_tag 'purple-button-sidebar.svg', class: 'sidebar-items' %>
-      Friends
-    <% end %>
-    <%= link_to moments_path @current_user do %>
-      <%= image_tag 'red-button-sidebar.svg', class: 'sidebar-items' %>
-      Moments
-    <% end %>
-    <%= link_to new_event_path do %>
-      <%= image_tag '', class: 'sidebar-items' %>
-      Create Event
-    <% end %>
-    <%= link_to edit_profile_path(current_user) do %>
-      <%= image_tag '', class: 'sidebar-items' %>
-      Edit
-    <% end %>
-    <%= link_to destroy_user_session_path, method: :delete do %>
-      <%= image_tag '', class: 'sidebar-items' %>
-      Log out
-    <% end %>
-    <%= image_tag '', class: 'sidebar-items' %>
-  <% else %>
-       <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-  <% end %>
- </div>
+      </div>
+  </div>
 </nav>
 

@@ -2,19 +2,29 @@
   background-color: #0E1732;
   display: flex;
   padding-top: 25px;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
+  width: 100px;
 }
-
+.container-sidebar {
+  display: flex;
+  flex-direction: column;
+  top: 0px;
+  height: 100vh;
+}
 .sidebar-items,
-.visor-side-column-icons {
+.visor-side-column-icons,
+.avatar-square-sidebar,
+.sidebar-logo {
   display: flex;
   flex-direction: column;
   flex-wrap: no-wrap;
-  margin: 25px;
+  margin-bottom: 25px;
   justify-content: flex-start;
   align-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
-
-
+.side-bar-logo {
+  position: absolute;
+  top: -20px;
+}
