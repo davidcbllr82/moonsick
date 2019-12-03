@@ -21,3 +21,8 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
+.layout__index-moments-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,10 +1,18 @@
-<!-- display your moments and the moments that have been directly shared to you -->
-<div class="header-container">
-  <h1 class="title-header">Moments</h1>
-  <p class="hover-underline-animation"></p>
+<div>
+  <div class="header-container">
+    <h1 class="title-header">Moments</h1>
+    <p class="hover-underline-animation"></p>
+  </div>
+  <!-- display your moments and the moments that have been directly shared to you -->
+  <div class="layout__index-moments-page">
+    <div class="container-moments">
+      <div class="container-moments-header"></div>
+    </div>
+  </div>
 </div>
 
-  <% @moments.each do |moment| %>
-    <%= moment.user.username %>
-    <%= moment.content %> <!-- should be username and avatar -->
-  <% end %>
+
+      <% @moments.each do |moment| %>
+        <%= moment.user.username %>
+        <%= moment.content %> <!-- should be username and avatar -->
+      <% end %>
