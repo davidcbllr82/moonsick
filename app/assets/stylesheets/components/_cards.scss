@@ -59,12 +59,27 @@
   }
 }
 
-.profile-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: bold;
-  font-size: 20px
+.profile-link {
+
+  .profile-card {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: transform;
+
+    img {
+      margin-right: 10px;
+    }
+  }
+
+  &:hover {
+    .profile-card {
+      transform: scale(1.2);
+    }
+  }
 }
 
 .profile-moment {

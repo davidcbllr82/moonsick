@@ -40,7 +40,9 @@
   <body class="layout-primary">
         <%= render 'shared/sidebar' %>
         <%= render 'shared/dogbot' %>
-        <%= yield %>
+        <div>
+          <%= yield %>
+        </div>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
