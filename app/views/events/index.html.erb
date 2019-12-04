@@ -4,7 +4,7 @@
 </div>
 
 
-<div class="visor-list" style="overflow-y:scroll;overflow-x:hidden;height:470px;">
+<div class="visor-list" style="overflow-y:scroll; overflow-x:hidden; height:560px; scrollbar-width: none;">
   <% @events.each do |e| %>
   <div class="event-card" style="width: 500px;">
     <%= link_to e.title, event_path(e) %>

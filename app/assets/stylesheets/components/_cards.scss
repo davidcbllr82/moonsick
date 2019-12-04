@@ -16,7 +16,7 @@
 // }
 
 .event-card {
-  background-color: #6DC142;
+  background: linear-gradient(to right, #f79d00, #64f38c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   margin: 30px;
   padding: 20px;
   border-radius: 5px;
@@ -28,12 +28,20 @@
   align-items: center;
   transition-duration: 0.3s;
   transition-property: box-shadow, transform;
+  a {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    &:hover {
+     color: rgb(200, 220, 220);
+      }
+  }
 }
 .event-card:hover,
 .event-card:focus,
 .event-card:active {
   box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.5);
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 
