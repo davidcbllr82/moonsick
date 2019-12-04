@@ -36,6 +36,7 @@
   grid-template-rows: 1fer 1fr;
 }
 .header-container {
+  z-index: 20;
   font-family: Rationale;
   margin-top: 61px;
   margin-left: 100px;
@@ -303,10 +304,30 @@
 
 }
 
+// ============================ CANVAS
 
+.canvas-interactive-wrapper {
+    position: relative;
+    height: 300px;
+    text-align: center;
+}
 
+.canvas-interactive-wrapper canvas {
+    position: absolute;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
 
+// ============================= PROFILEs-FRIENDS
 
+.grid-friends {
+  display: flex;
+}
 
 
 

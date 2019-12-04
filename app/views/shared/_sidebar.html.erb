@@ -1,5 +1,4 @@
 <!-- _sidebar.html.erb -->
-
 <nav class="sidebar">
   <div class="container-sidebar text-center">
     <% if user_signed_in? %>
@@ -14,22 +13,22 @@
             <%= cl_image_tag current_user.profile_avatar, class: 'avatar-square-sidebar' %>
           <% end %>
        </li>
-       <li class="sidebar-items">
+       <li class="sidebar-items active" id="default-state">
           <%= link_to root_path @current_user do %>
             <%= image_tag 'blue-button-sidebar.svg', class: 'sidebar-items' %>
           <% end %>
        </li>
-        <li class="sidebar-items">
+        <li class="sidebar-items violet-state" id="violet-state">
           <%= link_to events_path  do %>
             <%= image_tag 'green-button-sidebar.svg', class: 'sidebar-items' %>
           <% end %>
        </li>
-        <li class="sidebar-items">
+        <li class="sidebar-items orange-state" id="orange-state">
           <%= link_to profiles_path do %>
             <%= image_tag 'purple-button-sidebar.svg', class: 'sidebar-items' %>
           <% end %>
        </li>
-        <li class="sidebar-items">
+        <li class="sidebar-items" id="violet-state">
           <%= link_to moments_path do %>
             <%= image_tag 'red-button-sidebar.svg', class: 'sidebar-items' %>
           <% end %>
@@ -59,4 +58,6 @@
       </div>
   </div>
 </nav>
+
+
 
