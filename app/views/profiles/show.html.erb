@@ -27,14 +27,27 @@
   <div class="visor-moments">
     <div class="visor-header-moments"><p class="visor-txt"><%= @profile.username %>' moments</p></div>
   </div>
+
+
+
   <div class="visor-events">
     <div class="visor-header-events"><p class="visor-txt"><%= @profile.username %>' events</p></div>
+    <div class="event-carousel" data-flickity='{ "autoPlay": 3500, "wrapAround": true}'>
+
+    <% @events.each do |e| %>
+      <div class="profile-event" style="background-image: url(<%= cl_image_path e.banner %>)">
+        <%= link_to e.title, event_path(e) %>
+      </div>
+    <% end %>
   </div>
+
+
+
   <div class="visor-top-songs">
     <div class="visor-header-top-songs"><p class="visor-txt"><%= @profile.username %>' Top Songs</p></div>
       <div class="carousel" data-flickity='{ "autoPlay": 3500, "wrapAround": true}'>
 
-            <div class="carousel-cell">
+             <div class="carousel-cell">
               <% if @profile.spotify_top_1.present? %>
                 <%= spotify_song(@profile.spotify_top_1_uid) %>
               <% end %>
@@ -67,3 +80,6 @@
 
   </div>
 </div>
+
+
+
