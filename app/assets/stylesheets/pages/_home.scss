@@ -196,6 +196,8 @@
   width: 600px;
   bottom: 0;
   background-color: #4A27B7;
+  display: flex;
+  justify-content: space-between;
 }
 .dogbot {
   position: absolute;

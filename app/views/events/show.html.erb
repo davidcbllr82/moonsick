@@ -39,15 +39,9 @@
 <!-- Playlist & Create,display moments -->
   <div class="visor-playlist-moments">
     <div class="visor-playlist-header"><p class="visor-txt"><%= @event.title %>' beats</p></div>
+
     <div class="embeded-player">
       <%= spotify_embed_player(@event.spotify_playlist_id) %>
-    </div>
-    <div class="moment-submit">
-      <%= form_for([@event, @moment]) do |m| %>
-        <%= m.label :content %>
-        <%= m.text_field :content %>
-        <%= m.submit %>
-      <% end %>
     </div>
   </div>
 
@@ -71,20 +65,27 @@
     </div>
     <div class="visor-multimedia-footer">
       <ul class="list-inline">
+        <li class="list-inline-item">
+          <div class="moment-submit">
+            <%= form_for([@event, @moment]) do |m| %>
+              <%= m.text_field :content %>
+              <%= m.submit %>
+            <% end %>
+          </div>
+        </li>
+
         <li class="list-inline-item"><%= image_tag 'play-button-green.svg', class: "icon-play" %></li>
         <li class="list-inline-item"><%= image_tag 'icon-smiley.svg' %></li>
         <li class="list-inline-item"><%= image_tag 'icon-party.svg' %></li>
       </ul>
     </div>
   </div>
-</div>
+  </div>
 
-<div class="moment-new">
+<div class="moment-show-event-card" >
   <% @moments.each do |m| %>
     <%= m.user.username %>
-    <%= m.user.profile_avatar %>
-    <%= m.event.title %>
-    <%= m.event.scheduled_at %>
     <p><%= m.content %></p>
   <% end %>
 </div>
+
