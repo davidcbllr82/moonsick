@@ -1,16 +1,15 @@
-<div>
+
   <div class="title">
     <h1 class="title-header">Friends</h1>
     <p class="hover-underline-animation"></p>
   </div>
-  <!-- display your moments and the moments that have been directly shared to you -->
-  <div class="layout__index-friends-page">
-    <div class="container-friends">
-      <div class="container-friends-header"></div>
-    </div>
-  </div>
-</div>
 
-<%= @profiles.each do |profile| %>
-  <%= profile.username %>
-<% end %>
+  <div class="grid-friends">
+    <% @profiles.each do |profile| %>
+    <div class="profile-card avatar">
+      <%= profile.username %>
+      <%= cl_image_tag(profile.profile_avatar, class: 'avatar')%>
+    </div>
+    <% end %>
+  </div>
+
