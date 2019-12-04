@@ -8,7 +8,7 @@
   <% @events.each do |e| %>
   <div class="event-card" style="width: 500px;">
     <%= link_to e.title, event_path(e) %>
-    <%= e.scheduled_at.strftime('%a %b %y %l %M %p') %>
+    <%#= e.scheduled_at.strftime('%a %b %y %l %M %p') %>
     <%= cl_image_tag(e.event_avatar, :width=>50, :height=>50, :crop=>"scale")%>
   </div>
   <% end %>
