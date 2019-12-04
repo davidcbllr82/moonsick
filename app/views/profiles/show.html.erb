@@ -26,9 +26,14 @@
 
   <div class="visor-moments">
     <div class="visor-header-moments"><p class="visor-txt"><%= @profile.username %>' moments</p></div>
+    <div class="moment-carousel" data-flickity='{ "autoPlay": 3500, "wrapAround": true}'>
+    <% @moments.each do |m| %>
+      <div class="profile-moment">
+        <%= link_to m.event.title, event_path(m.event_id) %>
+        <%= m.content %>
+      </div>
+    <% end %>
   </div>
-
-
 
   <div class="visor-events">
     <div class="visor-header-events"><p class="visor-txt"><%= @profile.username %>' events</p></div>
@@ -40,8 +45,6 @@
       </div>
     <% end %>
   </div>
-
-
 
   <div class="visor-top-songs">
     <div class="visor-header-top-songs"><p class="visor-txt"><%= @profile.username %>' Top Songs</p></div>
@@ -80,6 +83,3 @@
 
   </div>
 </div>
-
-
-

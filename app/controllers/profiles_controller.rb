@@ -12,6 +12,8 @@ class ProfilesController < ApplicationController
     @friendships = @profile.friendships_as_receiver.count
     # display a persons events
     @events = @profile.events
+    # display a persons moments
+    @moments = @profile.moments
   end
 
   def edit
