@@ -1,10 +1,6 @@
 // home-page-profile#show-profile#edit
-
 // ======================== > > Devise/registrations#new
 // ======================== > > Devise/sesions#new
-.home-page {
-  display: flex;
-}
 .grid-centering {
   display: flex;
   flex-direction: column;
@@ -201,10 +197,12 @@
   width: 600px;
   bottom: 0;
   background-color: #4A27B7;
+  display: flex;
+  justify-content: space-between;
 }
 .dogbot {
   position: absolute;
-  top: 50px;
+  top: 40px;
   right: 40px;
   width: 80px;
   height: 80px;
@@ -217,20 +215,18 @@
 // ============================= > Index__pages
 .visor-list {
   position: absolute;
-  width: 377px;
+  width: 700px;
   height: 477px;
-  left: 226px;
+  left: 200px;
   top: 277px;
-  background: #0E1632;
+  background: #0E1732;
   box-shadow: 10px 10px 10px rgba(126, 117, 117, 0.25);
   border-radius: 0px 0px 10px 10px;
 }
-.visor-list-header {
+.visor-header-index {
   position: relative;
   width: 377px;
   height: 60px;
-  left: 0px;
-  top:-30px;
   background: #0E1732;
   border-radius: 10px 10px 0px 0px;
 }
@@ -238,19 +234,17 @@
   position: absolute;
   width: 608px;
   height: 562px;
-  left: 0px;
-  top: 0px;
+  right: 150px;
+  top: 200px;
   background: linear-gradient(to bottom, #0e1732 0%, #4a27b7 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e1732', endColorstr='#4a27b7',GradientType=0 );
-  box-shadow: 16px -2px 41px -15px rgba(0,0,0,.3);
+  box-shadow: 10px 10px 10px rgba(126, 117, 117, 0.25);
   border-radius: 10px;
 }
 .visor-musicplayer {
-  position: absolute;
+  position: relative;
   width: 608px;
   height: 60px;
-  left: 700px;
-  top: -100px;
   font-family: Rationale;
   font-style: normal;
   font-weight: normal;
@@ -278,7 +272,7 @@
   border-radius: 5px;
 }
 .container-moments {
-  position:absolute;
+  position: absolute;
   top: 200px;
   height: 600px;
   width: 900px;
