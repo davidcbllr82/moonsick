@@ -4,7 +4,7 @@ module PlaylistsHelper
 
     tag.iframe src: url,
                width: 500,
-               height: 420,
+               height: 620,
                frameborder: 0,
                allowtransparency: true,
                allow: "encrypted-media"
@@ -15,7 +15,7 @@ module PlaylistsHelper
     url = "https://open.spotify.com/embed/track/#{spotify_uid}"
 
     tag.iframe src: url,
-               width:300,
+               width: 300,
                height: 380,
                frameborder: 0,
                allowtransparency: true,
