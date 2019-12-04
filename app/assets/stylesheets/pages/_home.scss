@@ -31,13 +31,7 @@
   display: grid;
   grid-template-rows: 1fer 1fr;
 }
-.header-container {
-  z-index: 20;
-  font-family: Rationale;
-  margin-top: 61px;
-  margin-left: 100px;
-  margin-bottom: 117px;
-}
+
 .title-header,
 .sub-title {
   font-family: Rationale;
@@ -219,9 +213,9 @@
   height: 600px;
   left: 200px;
   top: 210px;
-  // background: #0E1732;
-  // box-shadow: 10px 10px 10px rgba(126, 117, 117, 0.25);
   border-radius: 0px 0px 10px 10px;
+  overflow-y: scroll;
+  overflow-x:hidden;
 }
 .visor-header-index {
   position: relative;

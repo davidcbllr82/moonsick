@@ -37,8 +37,7 @@
     </script>
   </head>
 
-  <body class="canvas-interactive-wrapper layout-primary <%= user_signed_in? ? 'layout-primary-active': '' %>">
-      <canvas id="canvas-interactive"></canvas>
+  <body class="layout-primary <%= user_signed_in? ? 'layout-primary-active': '' %>">
         <%= render 'shared/sidebar' %>
         <%= render 'shared/dogbot' %>
         <%= yield %>
@@ -47,3 +46,13 @@
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   </body>
 </html>
+
+<!-- <body class="canvas-interactive-wrapper layout-primary <%#= user_signed_in? ? 'layout-primary-active': '' %>">
+    <canvas id="canvas-interactive"></canvas>
+      <%#= render 'shared/sidebar' %>
+      <%#= render 'shared/dogbot' %>
+      <%#= yield %>
+  <%#= javascript_include_tag 'application' %>
+  <#%= javascript_pack_tag 'application' %>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</body> -->
