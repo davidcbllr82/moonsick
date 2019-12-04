@@ -13,22 +13,22 @@
             <%= cl_image_tag current_user.profile_avatar, class: 'avatar-square-sidebar' %>
           <% end %>
        </li>
-       <li class="sidebar-items active" id="default-state">
+       <li class="sidebar-items">
           <%= link_to root_path @current_user do %>
             <%= image_tag 'blue-button-sidebar.svg', class: 'sidebar-items' %>
           <% end %>
        </li>
-        <li class="sidebar-items violet-state" id="violet-state">
+        <li class="sidebar-items violet-state">
           <%= link_to events_path  do %>
             <%= image_tag 'green-button-sidebar.svg', class: 'sidebar-items' %>
           <% end %>
        </li>
-        <li class="sidebar-items orange-state" id="orange-state">
+        <li class="sidebar-items orange-state">
           <%= link_to profiles_path do %>
             <%= image_tag 'purple-button-sidebar.svg', class: 'sidebar-items' %>
           <% end %>
        </li>
-        <li class="sidebar-items" id="violet-state">
+        <li class="sidebar-items">
           <%= link_to moments_path do %>
             <%= image_tag 'red-button-sidebar.svg', class: 'sidebar-items' %>
           <% end %>
@@ -55,7 +55,6 @@
     <% else %>
       <%= link_to "Login", new_user_session_path, class: "nav-link" %>
     <% end %>
-      </div>
   </div>
 </nav>
 

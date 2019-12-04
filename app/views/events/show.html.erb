@@ -39,7 +39,6 @@
 <!-- Playlist & Create,display moments -->
   <div class="visor-playlist-moments">
     <div class="visor-playlist-header"><p class="visor-txt"><%= @event.title %>' beats</p></div>
-
     <div class="embeded-player">
       <%= spotify_embed_player(@event.spotify_playlist_id) %>
     </div>
@@ -57,6 +56,7 @@
         <li class="list-inline-item"><%= image_tag 'blue-button-sidebar.svg' %></li>
       </ul>
     </div>
+
     <div class="visor-side-column-icons">
       <%= image_tag 'icon-full_screen.svg' %>
       <%= image_tag 'icon-download.svg' %>
@@ -80,7 +80,7 @@
       </ul>
     </div>
   </div>
-  </div>
+</div>
 
 <div class="moment-show-event-card" >
   <% @moments.each do |m| %>
