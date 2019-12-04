@@ -54,15 +54,27 @@
         <li class="list-inline-item"><%= image_tag 'blue-button-sidebar.svg' %></li>
         <li class="list-inline-item"><%= image_tag 'blue-button-sidebar.svg' %></li>
         <li class="list-inline-item"><%= image_tag 'blue-button-sidebar.svg' %></li>
+        <li class="list-inline-item"><%= image_tag 'icon-facebook.svg' %></li>
+        <li class="list-inline-item"><%= image_tag 'icon-link.svg' %></li>
+        <li class="list-inline-item"><%= image_tag 'icon-download.svg' %></li>
+        <li class="list-inline-item"><%= image_tag 'icon-full_screen.svg' %></li>
       </ul>
+      <div class="event-carousel" data-flickity='{ "autoPlay": 3500, "wrapAround": true}'>
+          <% @moments.each do |m| %>
+              <div class="moment-show-event-card" >
+                <%= cl_image_tag(m.user.profile_avatar, class: 'avatar')%>
+                <h3><%= m.user.username %></h3>
+                <p><%= m.content %></p>
+              </div>
+          <% end %>
     </div>
 
-    <div class="visor-side-column-icons">
+   <!--  <div class="visor-side-column-icons">
       <%= image_tag 'icon-full_screen.svg' %>
       <%= image_tag 'icon-download.svg' %>
       <%= image_tag 'icon-link.svg' %>
       <%= image_tag 'icon-facebook.svg' %>
-    </div>
+    </div> -->
     <div class="visor-multimedia-footer">
       <ul class="list-inline">
         <li class="list-inline-item">
@@ -80,12 +92,5 @@
       </ul>
     </div>
   </div>
-</div>
-
-<div class="moment-show-event-card" >
-  <% @moments.each do |m| %>
-    <%= m.user.username %>
-    <p><%= m.content %></p>
-  <% end %>
 </div>
 
