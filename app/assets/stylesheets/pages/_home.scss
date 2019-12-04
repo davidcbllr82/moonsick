@@ -93,10 +93,29 @@
 }
 .event-details {
   display: flex;
+  position: absolute;
+  right: 38px;
+  top: 150px;
+  z-index: 10;
 
   .event-info {
+    padding: 20px 20px;
+    margin-top: 20px;
     padding: 0px 20px;
+    height: 180px;
+    width: 720px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
   }
+}
+.overflow-scroll__scroller {
+  overflow-y: scroll;
+  width: 670px;
+  height: 100px;
+  padding: 40px;
+  margin-right: 10px;
+  line-height: 1.5;
+  color: black;
 }
 .profile-name {
   position: absolute;
@@ -111,22 +130,16 @@
 }
 .event-name {
   position: absolute;
-  left: 650px;
-  top: 40px;
+  left: 90px;
+  top: 60px;
   font-family: Scada;
   font-style: normal;
   font-weight: normal;
   font-size: 80px;
   text-align: center;
   color: #FFFFFF;
-}
-.overflow-scroll__scroller {
-  overflow-y: scroll;
-  width: 470px;
-  height: 100px;
-  margin-right: 10px;
-  line-height: 1.5;
-  color: black;
+  background-color: #D4E157;
+  padding: 10px;
 }
 .profile-elements {
   display: flex;
@@ -149,15 +162,30 @@
   height: 40px;
   width: 700px;
 }
-.visor-events,
+
 .visor-moments {
   margin-top: 45px;
-  margin-left: -30px;
+  margin-left: 30px;
   height: 210px;
   width: 700px;
   background: linear-gradient(to bottom, #0e1732 0%, #4a27b7 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e1732', endColorstr='#4a27b7',GradientType=0 );
   box-shadow: 16px -2px 41px -15px rgba(0,0,0,.3);
+}
+.visor-events {
+  margin-top: 45px;
+  height: 210px;
+  width: 700px;
+  background: linear-gradient(to bottom, #0e1732 0%, #4a27b7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e1732', endColorstr='#4a27b7',GradientType=0 );
+  box-shadow: 16px -2px 41px -15px rgba(0,0,0,.3);
+}
+.embeded-player {
+  position: absolute;
+  margin-top: -35px;
+  margin-left: 10px;
+  height: 600px;
+  z-index: 10px;
 }
 .visor-playlist-header {
   position: relative;
@@ -165,8 +193,9 @@
   height: 40px;
   width: 500px;
   bottom: 0;
-  z-index: 1;
+  z-index: 10;
 }
+
 .visor-top-songs {
   position: absolute;
   width: 700px;
@@ -177,6 +206,17 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e1732', endColorstr='#4a27b7',GradientType=0 );
   box-shadow: 16px -2px 41px -15px rgba(0,0,0,.3);
 }
+.visor-multimedia {
+  position: absolute;
+  width: 900px;
+  height: 580px;
+  right: 40px;
+  top: 350px;
+  background: linear-gradient(to bottom, #0e1732 0%, #4a27b7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e1732', endColorstr='#4a27b7',GradientType=0 );
+  box-shadow: 16px -2px 41px -15px rgba(0,0,0,.3);
+}
+
 .visor-txt {
   position: absolute;
   top: 30%;
@@ -196,7 +236,7 @@
 }
 .dogbot {
   position: absolute;
-  top: 40px;
+  top: 20px;
   right: 40px;
   width: 80px;
   height: 80px;
