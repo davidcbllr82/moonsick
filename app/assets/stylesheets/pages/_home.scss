@@ -79,6 +79,8 @@
 }
 .profile-information {
   display: flex;
+  position: absolute;
+  left: 110px;
 
   .personal-info {
     margin-top: 20px;
@@ -104,7 +106,7 @@
     padding: 0px 20px;
     height: 180px;
     width: 720px;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgb(74, 39, 183);
     backdrop-filter: blur(15px);
   }
 }
@@ -147,26 +149,26 @@
 .visor-header-events {
   position: relative;
   background-color: #6DC142;
-  height: 40px;
+  height: 60px;
   width: 700px;
 }
 .visor-header-moments {
   position: relative;
   background-color: #EE6E79;
-  height: 40px;
+  height: 60px;
   width: 700px;
 }
 .visor-header-top-songs {
   position: relative;
   background-color: #F1B042;
-  height: 40px;
+  height: 60px;
   width: 700px;
 }
 
 .visor-moments {
   margin-top: 45px;
   margin-left: 30px;
-  height: 210px;
+  height: 230px;
   width: 700px;
   background: linear-gradient(to bottom, #0e1732 0%, #4a27b7 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e1732', endColorstr='#4a27b7',GradientType=0 );
@@ -174,7 +176,7 @@
 }
 .visor-events {
   margin-top: 45px;
-  height: 210px;
+  height: 230px;
   width: 700px;
   background: linear-gradient(to bottom, #0e1732 0%, #4a27b7 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e1732', endColorstr='#4a27b7',GradientType=0 );
@@ -182,15 +184,15 @@
 }
 .embeded-player {
   position: absolute;
-  margin-top: -35px;
-  margin-left: 10px;
-  height: 600px;
+  margin-top: -70px;
+  margin-left: 40px;
+  height: 620px;
   z-index: 10px;
 }
 .visor-playlist-header {
   position: relative;
   background-color: #429ADD;
-  height: 40px;
+  height: 70px;
   width: 500px;
   bottom: 0;
   z-index: 10;
@@ -199,8 +201,8 @@
 .visor-top-songs {
   position: absolute;
   width: 700px;
-  height: 465px;
-  right: 40px;
+  height: 485px;
+  right: 60px;
   top: 350px;
   background: linear-gradient(to bottom, #0e1732 0%, #4a27b7 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e1732', endColorstr='#4a27b7',GradientType=0 );
@@ -220,9 +222,9 @@
 .visor-txt {
   position: absolute;
   top: 30%;
-  margin-left: 15px;
+  margin-left: 18%;
   font-family: Rationale;
-  font-size: 15px;
+  font-size: 25px;
   color: white;
   letter-spacing: 4px;
 }
@@ -236,7 +238,7 @@
 }
 .dogbot {
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 40px;
   width: 80px;
   height: 80px;
