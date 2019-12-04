@@ -1,23 +1,22 @@
-
-  <div class="header-container">
-    <h1 class="title-header">Events</h1>
-    <p class="hover-underline-animation"></p>
-  </div>
+<div class="header-container">
+  <h1 class="title-header">Events</h1>
+  <p class="hover-underline-animation"></p>
 </div>
-<div class="layout__index-page">
-  <div class="visor-list">
-    <div class="visor-header-index">
-      <% @events.each do |e| %>
-      <div class="event-card">
-        <%= link_to e.title, event_path(e) %>
-        <%= e.scheduled_at.strftime('%a %b %y %l %M %p') %>
-        <%= cl_image_tag(e.event_avatar, :width=>50, :height=>50, :crop=>"scale")%>
-      </div>
-      <% end %>
-    </div>
+
+
+<div class="visor-list" style="overflow-y:scroll;overflow-x:hidden;height:470px;">
+  <% @events.each do |e| %>
+  <div class="event-card" style="width: 500px;">
+    <%= link_to e.title, event_path(e) %>
+    <%= e.scheduled_at.strftime('%a %b %y %l %M %p') %>
+    <%= cl_image_tag(e.event_avatar, :width=>50, :height=>50, :crop=>"scale")%>
+  </div>
+  <% end %>
+</div>
+
+<div class="visor-particles">
   <div class="visor-musicplayer">
     <%= image_tag 'icon-play-yellow.svg', class: 'play-yellow' %>
   </div>
-  <div class="visor-particles"></div>
 </div>
 

@@ -7,37 +7,36 @@
 
       <div class="event-info">
         <h2>Event celebration:</h2>
-        <ul class="personal-data list-inline">
-          <li class=" list-inline-item"><%= @event.scheduled_at %> </li>
-  <!--  if you are the creater see these options -->
-        <% if policy(@event).edit? %>
-          <li><%= link_to "Edit Event", edit_event_path(@event) %></li>
-          <li><%= link_to "Delete Event", event_path(@event), method: :delete %></li>
-        </ul>
-
         <div class="overflow-scroll__scroller">
           <%= @event.description %>
-  <!-- click attend and create a new instance of an event -->
-        <% elsif user_signed_in? %>
-          <% unless current_user.attendees.pluck(:event_id).include?(params[:id].to_i) %>
-            <%= simple_form_for([@event, @attendee]) do |f| %>
-              <%= f.submit "Attend", class: "icon__attend_count" %>
-            <% end %>
-          <% else %>
-  <!-- display attendees -->
-            <%= @attendees.count %>
-  <!-- change to avatar on pop up name and link to user_profile -->
-          <% end %>
-        <% end %>
         </div>
       </div>
     </div>
 
     <div class="event-passport">
       <h1 class="event-name"><%= @event.title %></h1>
+      <ul class="personal-data list-inline">
+        <li class=" list-inline-item"><%= @event.scheduled_at %> </li>
+<!--  if you are the creater see these options -->
+      <% if policy(@event).edit? %>
+        <li><%= link_to "Edit Event", edit_event_path(@event) %></li>
+        <li><%= link_to "Delete Event", event_path(@event), method: :delete %></li>
+<!-- click attend and create a new instance of an event -->
+        <% elsif user_signed_in? %>
+          <% unless current_user.attendees.pluck(:event_id).include?(params[:id].to_i) %>
+            <%= simple_form_for([@event, @attendee]) do |f| %>
+              <%= f.submit "Attend", class: "icon__attend_count" %>
+            <% end %>
+          <% else %>
+<!-- display attendees -->
+            <%= @attendees.count %>
+<!-- change to avatar on pop up name and link to user_profile -->
+          <% end %>
+        <% end %>
+      </ul>
     </div>
   </div>
-  <!-- Playlist & Create,display moments -->
+<!-- Playlist & Create,display moments -->
   <div class="visor-playlist-moments">
     <div class="visor-playlist-header"><p class="visor-txt"><%= @event.title %>' beats</p></div>
     <div class="embeded-player">
