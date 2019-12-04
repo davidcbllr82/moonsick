@@ -37,6 +37,18 @@
 }
 
 
+.profile-event {
+  padding: 50px;
+  height: 170px;
+  width: 270px;
+  background-size: cover;
+  border-radius: 5px;
+  a {
+    color: white;
+    font-weight: bold;
+    font-size: 20px
+  }
+}
 
 .profile-moment {
   background: linear-gradient(to right, #fffbd5, #b20a2c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
