@@ -10,51 +10,49 @@
 # generate 50 profiles
 
 
-# p "Creating 50 profiles"
+p "Creating 50 profiles"
 
-# 50.times do |u|
-#   url = "https://source.unsplash.com/random/?portrait"
-#   profile = User.new(
-#     email: Faker::Internet.unique.email,
-#     password: Faker::Alphanumeric.alphanumeric(number: 10),
-#     username: Faker::Name.unique.name,
-#     bio: Faker::Movies::VForVendetta.speech,
-#     location: Faker::Address.city,
-#     )
-#   profile.remote_profile_avatar_url = url
-#   profile.remote_profile_banner_url = "https://source.unsplash.com/random/?textures-patters"
-#   profile.spotify_top_1 = "spotify:track:1rgnBhdG2JDFTbYkYRZAku"
-#   profile.spotify_top_2 = "spotify:track:21jGcNKet2qwijlDFuPiPb"
-#   profile.spotify_top_3 = "spotify:track:7LzouaWGFCy4tkXDOOnEyM"
-#   profile.spotify_top_4 = "spotify:track:4tidSEPF7Dbxcdxv3VyIHd"
-#   profile.spotify_top_5 = "spotify:track:0Y2cjFzr3R7KLPeFyxaggg"
-#   profile.save
-# end
+50.times do |u|
+  url = "https://source.unsplash.com/random/?portrait"
+  profile = User.new(
+    email: Faker::Internet.unique.email,
+    password: Faker::Alphanumeric.alphanumeric(number: 10),
+    username: Faker::Name.unique.name,
+    bio: Faker::Movies::VForVendetta.speech,
+    location: Faker::Address.city,
+    )
+  profile.remote_profile_avatar_url = url
+  profile.remote_profile_banner_url = "https://source.unsplash.com/random/?textures-patters"
+  profile.spotify_top_1 = "spotify:track:1rgnBhdG2JDFTbYkYRZAku"
+  profile.spotify_top_2 = "spotify:track:21jGcNKet2qwijlDFuPiPb"
+  profile.spotify_top_3 = "spotify:track:7LzouaWGFCy4tkXDOOnEyM"
+  profile.spotify_top_4 = "spotify:track:4tidSEPF7Dbxcdxv3VyIHd"
+  profile.spotify_top_5 = "spotify:track:0Y2cjFzr3R7KLPeFyxaggg"
+  profile.save
+end
 
-# p "Here is 50 new profiles"
-
-
-# p "Creating 50 events"
+p "Here is 50 new profiles"
 
 
-
-# 50.times do |e|
-#   event = Event.new(
-#     title: Faker::Music.unique.album,
-#     description: Faker::TvShows::SiliconValley.quote,
-#     scheduled_at: DateTime.now + (rand * 50)
-#      )
-#   event.user_id = rand(1..50)
-#   event.remote_banner_url = "https://source.unsplash.com/random/?lights"
-#   event.remote_event_avatar_url = "https://source.unsplash.com/random/?art"
-#   event.spotify_uri = "spotify:playlist:37i9dQZF1DX5wcoyvtNnP4"
-#   event.save
-# end
-
-# p "Your events are done!"
+p "Creating 50 events"
 
 
-# generate 10 moments for each user
+
+50.times do |e|
+  event = Event.new(
+    title: Faker::Music.unique.album,
+    description: Faker::TvShows::SiliconValley.quote,
+    scheduled_at: DateTime.now + (rand * 50)
+     )
+  event.user_id = rand(1..50)
+  event.remote_banner_url = "https://source.unsplash.com/random/?lights"
+  event.remote_event_avatar_url = "https://source.unsplash.com/random/?art"
+  event.spotify_uri = "spotify:playlist:37i9dQZF1DX5wcoyvtNnP4"
+  event.save
+end
+
+p "Your events are done!"
+
 
 p "Generating 10 moments"
 
