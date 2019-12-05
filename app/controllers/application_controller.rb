@@ -25,6 +25,5 @@ class ApplicationController < ActionController::Base
   end
 
   def default_url_options
-    { host: ENV["www.deyz.club"] || "localhost:3000" }
   end
 end
