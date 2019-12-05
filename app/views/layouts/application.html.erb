@@ -39,8 +39,8 @@
 
   <body class="layout-primary">
         <%= render 'shared/sidebar' %>
-        <%#= render 'shared/dogbot' %>
-        <div class="overall-layout">
+        <%= render 'shared/dogbot' %>
+        <div>
           <%= yield %>
         </div>
     <%= javascript_include_tag 'application' %>

@@ -1,19 +1,6 @@
-// .event-card {
-//   background-color: #6DC142;
-//   margin: 30px;
-//   padding: 20px;
-//   border-radius: 5px;
-//   display: flex;
-//   box-shadow: 10px 10px 10px rgba(126, 117, 117, 0.25);
-//   justify-content: space-between;
-//   align-items: center;
-//   a {
-//     color: white;
-//     &:hover {
-//       color: rgb(220, 220, 220);
-//     }
-//   }
-// }
+// ======================================================= //
+// >>>>>>>>>>>>>>>>>>>   EVENT_CARD   <<<<<<<<<<<<<<<<<<<  //
+// ====================================================== //
 
 .event-card {
   background: linear-gradient(to right, #f79d00, #64f38c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -37,6 +24,7 @@
       }
   }
 }
+
 .event-card:hover,
 .event-card:focus,
 .event-card:active {
@@ -44,6 +32,9 @@
   transform: scale(1.1);
 }
 
+// ======================================================= //
+// >>>>>>>>>>>>>>>>>>>   PROFILE_EVENT_CARD   << <<<<<<<<  //
+// ====================================================== //
 
 .profile-event {
   padding: 50px;
@@ -60,7 +51,6 @@
 }
 
 .profile-link {
-
   .profile-card {
     display: flex;
     align-items: center;
@@ -82,6 +72,10 @@
   }
 }
 
+// ======================================================= //
+// >>>>>>>>>>>>>>>>>>>   PROFILE_MOMENT_CARD   << <<<<<<<<  //
+// ====================================================== //
+
 .profile-moment {
   background: linear-gradient(to right, #fffbd5, #b20a2c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   padding: 50px;
@@ -97,7 +91,6 @@
       }
   }
 }
-
 
 .moment-show-event-card {
   background: linear-gradient(to right, #b92b27, #1565c0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
