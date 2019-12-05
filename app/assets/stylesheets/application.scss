@@ -1,8 +1,6 @@
 // Graphical variables
 // @import "config/fonts";
 @import "config/colors";
-@import "config/bootstrap_variables";
-
 // External libraries
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
@@ -27,7 +25,5 @@
 @import "config/common";
 @import "components/sidebar";
 @import "components/button";
-@import "components/underline";
-@import "components/componentscollection";
 @import "components/header";
 @import "components/icon";
