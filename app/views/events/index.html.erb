@@ -1,26 +1,23 @@
-<div class="">
-  <p class="hover-underline-animation">Create a new event</p>
-</div>
+<div class="title-container">
 
-
-<div class="visor-events-friends">
-  <% @events.each do |e| %>
-  <div class="event-card" style="width: 500px;">
-    <%= link_to e.title, event_path(e) %>
-    <%= e.scheduled_at.strftime('%a %b %y %l %M %p') %>
-    <%= cl_image_tag(e.event_avatar, :width=>50, :height=>50, :crop=>"scale")%>
+  <div class="title-page">
+    <h1 class="neon" data-text="Events"></h1>
+    <div class="gradient"></div>
+    <div class="spotlight"></div>
   </div>
-  <% end %>
+
+  <div class="visor-events-friends" style="width: 80%;">
+    <% @events.each do |e| %>
+    <div class="event-card">
+      <%= link_to e.title, event_path(e) %>
+      <%= e.scheduled_at.strftime('%a %b %y %l %M %p') %>
+      <%= cl_image_tag(e.event_avatar, :width=>50, :height=>50, :crop=>"scale")%>
+    </div>
+    <% end %>
+  </div>
+  </div>
 </div>
 
-<div class="visor-events-mine">
-  <% @events.each do |e| %>
-  <div class="event-card" style="width: 500px;">
-    <%= link_to e.title, event_path(e) %>
-    <%= e.scheduled_at.strftime('%a %b %y %l %M %p') %>
-    <%= cl_image_tag(e.event_avatar, :width=>50, :height=>50, :crop=>"scale")%>
-  </div>
-  <% end %>
-</div>
+
 
 

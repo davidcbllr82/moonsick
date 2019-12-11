@@ -1,24 +1,35 @@
 // ======================================================= //
-// >>>>>>>>>>>>>>>>>>>   EVENT_CARD   <<<<<<<<<<<<<<<<<<<  //
+// >>>>>>>>>>>>>>>>>>>   EVENT_CARD#index   <<<<<<<<<<<<  //
 // ====================================================== //
-
 .event-card {
-  background: linear-gradient(to right, #f79d00, #64f38c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  margin: 30px;
-  padding: 20px;
-  border-radius: 5px;
+  position: relative;
+  background-color: #1a1a1a;
+  color: #fefefe;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 1.2em;
+  line-height: 2;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  text-align: center;
+  margin: 50px;
+  padding: 30px;
+  border-radius: 0;
   display: flex;
   vertical-align: middle;
-  justify-content: space-between;
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
+  justify-content: center;
+  align-content: center;
   align-items: center;
-  transition-duration: 0.3s;
+  transform: perspective(1px) translateZ(0);
+  // box-shadow: 0 0 1px transparent;
+  align-items: center;
+  transition-duration: 0.4s;
   transition-property: box-shadow, transform;
   a {
     color: white;
-    font-weight: bold;
-    font-size: 20px;
+    font-weight: light;
+    font-size: 1em;
     &:hover {
      color: rgb(200, 220, 220);
       }
@@ -29,15 +40,21 @@
 .event-card:focus,
 .event-card:active {
   box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.5);
-  transform: scale(1.1);
+  transform: scale(0.1);
 }
 
 // ======================================================= //
-// >>>>>>>>>>>>>>>>>>>   PROFILE_EVENT_CARD   << <<<<<<<<  //
+// >>>>>>>>>>>>>>>>>>>   PROFILE_CARD#index   <<<<<<<<<<<<  //
+// ====================================================== //
+
+
+
+// ======================================================= //
+// >>>>>>>>>>>>>>>>>>>   EVENT_CARD#SHOW   <<<<<<<<<<  //
 // ====================================================== //
 
 .profile-event {
-  padding: 50px;
+  padding: 10px;
   height: 170px;
   width: 270px;
   background-size: cover;
@@ -49,17 +66,23 @@
     }
   }
 }
+// ======================================================= //
+// >>>>>>>>>>>>>>>>>>>   EVENT_CARD#INDEX   <<<<<<<<<<  //
+// ====================================================== //
 
 .profile-link {
+  position: relative;
+  color: white;
+  justify-content: end;
+  margin-right: -100px;
   .profile-card {
     display: flex;
-    align-items: center;
-    font-weight: bold;
-    font-size: 20px;
-    transform: perspective(1px) translateZ(0);
+    align-items: flex-start;
+    font-weight: thin;
+    font-size: 15px;
+    transform: perspective(-10px) translateZ(4);
     transition-duration: 0.3s;
     transition-property: transform;
-
     img {
       margin-right: 10px;
     }
@@ -73,17 +96,18 @@
 }
 
 // ======================================================= //
-// >>>>>>>>>>>>>>>>>>>   PROFILE_MOMENT_CARD   << <<<<<<<<  //
+// >>>>>>>>>>>>>>>>>>   PROFILE_MOMENT_CARD   <<<<<<<<<  //
 // ====================================================== //
 
 .profile-moment {
-  background: linear-gradient(to right, #fffbd5, #b20a2c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  padding: 50px;
-  height: 170px;
-  width: 270px;
+  background: white;
+  padding: 5px;
+  height: 5%;
+  width: 20%;
   border-radius: 3px;
+  font-size: 14px;
   a {
-    color: white;
+    color: black;
     font-weight: bold;
     font-size: 20px;
     &:hover {
@@ -93,12 +117,16 @@
 }
 
 .moment-show-event-card {
-  background: linear-gradient(to right, #b92b27, #1565c0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  padding: 50px;
-  height: 300px;
-  width: 270px;
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  height: 100px;
+  width: 200px;
   border-radius: 3px;
   h3 {
     font-weight: bold;
+    color: black;
+    font-family: Inconsolata;
+
   }
 }

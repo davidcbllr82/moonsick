@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Deyz - Music Share</title>
+    <title>Moonsyc - Party Time</title>
     <meta name="description" content="<%= meta_description %>">
 
     <!-- Facebook Open Graph data -->
@@ -22,7 +22,7 @@
     <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
     <meta name="twitter:image:src" content="<%= meta_image %>">
 
-    <title>DEYZ - creative and fun platform to share your favorite music </title>
+    <title>Monsyc - Find the party you want, wherever you are </title>
     <%= favicon_link_tag(source = 'favicon.ico') %>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
@@ -30,6 +30,7 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %>
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
+   <script src="uikit/dist/js/uikit-icons.min.js"></script>
    <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -37,15 +38,24 @@
     </script>
   </head>
 
-  <body class="layout-primary">
-        <%= render 'shared/sidebar' %>
-        <%= render 'shared/dogbot' %>
-        <div>
-          <%= yield %>
-        </div>
+  <body>
+    <div>
+      <div id="content">
+        <%= render 'shared/logo' %>
+        <%= render 'shared/paths' %>
+        <%= yield %>
+      </div>
+    </div>
+
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script>
+      $('.txt').html(function(i, html) {
+        var chars = $.trim(html).split("");
+        return '<span>' + chars.join('</span><span>') + '</span>';
+      });
+    </script>
   </body>
 </html>
 

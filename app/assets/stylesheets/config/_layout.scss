@@ -1,34 +1,23 @@
-// OVERALL GRID
-.layout-primary {
-  display: grid;
-  grid-template-columns: 115px 1fr;
-  height: 100vh;
-  background-color: #F7F5EE;
-
-  &-active{
-    grid-template-columns: 180px 1fr;
-  }
-}
+// // OVERALL GRID
+// .layout-primary {
+//   position: absolute;
+//   top: 0%;
+//   left: 0%;
+//   height: 100vh;
+//   width: 100vw;
+//   background-color: black;
+//   justify-content: center;
+//   align-content: center;
+//   align-items: center;
+// }
 // PROFILE__EDIT, EVENT__EDIT, PROFILE__CREATE, EVENT__CREATE //
-.layout__edit__create-page {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-}
 
-// EVENTS__INDEX, FRIENDS__INDEX__MOMENTS_INDEX //
-
-.layout__index-page {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-}
-.layout__index-moments-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.layout-form {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-column: 2;
+#content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100vw; /* Need a specific value to work */
+  background-color: black;
 }

@@ -1,6 +1,5 @@
 import "bootstrap";
 import "uikit"
-
 import Granim  from "granim";
 
 // behavior side navbar
@@ -58,4 +57,23 @@ const hello = new Granim({
 
 const element = document.getElementById("granim-canvas")
 console.log(element)
-// console.log(hello)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// <
+
+
+

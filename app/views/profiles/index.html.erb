@@ -1,15 +1,24 @@
-<div class="">
-  <p class="hover-underline-animation">Friends</p>
+<div class="title-page">
+  <h1 class="neon" data-text="Friends"></h1>
+  <div class="gradient"></div>
+  <div class="spotlight"></div>
 </div>
 
-  <div class="grid-friends">
-    <% @profiles.each do |profile| %>
-      <%= link_to profile_path(profile), class: 'profile-link' do %>
-        <div class="profile-card">
-          <%= cl_image_tag(profile.profile_avatar, class: 'avatar')%>
-          <%= profile.username %>
-        </div>
-      <% end %>
+<div class="grid-friends">
+  <% @profiles.each do |profile| %>
+    <%= link_to profile_path(profile), class: 'profile-link' do %>
+      <div class="profile-card">
+        <%= cl_image_tag(profile.profile_avatar, class:'avatar')%>
+        <%= profile.username %><br>
+        <%= profile.location %>
+      </div>
     <% end %>
-  </div>
+  <% end %>
+</div>
 
+<div class="searchbar">
+  <form class="uk-search uk-search-large">
+    <span uk-search-icon></span>
+    <input class="uk-search-input" type="search" placeholder="Search...">
+  </form>
+</div>

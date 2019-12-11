@@ -26,9 +26,9 @@
   // box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
 }
 .avatar-sidebar {
-  position: absolute;
+  position: relative;
   top: 30px;
-  left: 25px;
+  right: 25px;
   margin-bottom: 100px;
   width: 50px;
   height: 50px;

@@ -1,20 +1,24 @@
 // _icon.scss
 
-.icon {
-  width: 20px;
-  height: 20px;
-  color: #5C39B4;
-}
-
 .logout {
-  position: absolute;
-  bottom: 50px;
-  left: 25px;
 }
 
-.icon-nav {
-  transform: rotate(90deg);
-  margin-bottom: -20px;
+.icon-action,
+.icon-index {
+  // transform: rotate(90deg);
+position: relative;
+top: 200px;
+width: 150px;
+left: 3%;
+font-size: 20px;
+padding-bottom: 40px;
+color: #5C39B4;
+}
+.icon-text {
+  position: relative;
+  top: 100px;
+  font: 14px;
+  width: 150px;
 }
 
 .icon-home {

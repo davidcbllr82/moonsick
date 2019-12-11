@@ -1,81 +1,67 @@
-<div class="container container-fluid">
-  <div class="profile-information">
-    <%= cl_image_tag @profile.profile_avatar, class: "avatar-square-profile" %>
-    <div class="personal-info">
-      <ul class="personal-data list-inline">
-        <li class="loc-user list-inline-item"><%= @profile.location %></li>
-        <li class="profile-name">
-          <div>
-            <h1 class="profile-name"><%= @profile.username %></h1>
-            <%= simple_form_for([@profile, @friendship]) do |f| %>
-              <%= f.button :submit %>
-            <% end %>
-            <%= @friendships %>
-          </div>
-        </li>
-      </ul>
-      <div class="overflow-scroll__scroller">
-        <%= @profile.bio %>
-      </div>
-    </div>
-  </div>
+
+<h2 class="profile-name"><%= @profile.username %></h2>
+<div class="overflow-scroll__scroller"><%= @profile.bio %></div>
+<%= simple_form_for([@profile, @friendship]) do |f| %>
+<span><%= f.button :submit, class:"mouse-cursor-gradient-tracking" %></span>
+<% end %>
+<div>
+  <%= cl_image_tag @profile.profile_avatar, class: "avatar-square-profile" %>
+</div>
+<span uk-icon="icon: location"><%= @profile.location %></span><br>
+<span uk-icon="icon: users"><%= @friendships %></span>
+
+<div class="event-carousel" data-flickity='{ "autoPlay": false, "wrapAround": true}'>
+    <% @moments.each do |m| %>
+        <div class="moment-show-event-card" >
+          <%= cl_image_tag(m.user.profile_avatar, class: 'avatar')%>
+          <h3><%= m.user.username %></h3>
+          <p><%= m.content %></p>
+        </div>
+    <% end %>
 </div>
 
-<div class="container container-fluid">
-  <div class="row justify-content-md-center visor-moments">
-    <div class="visor-header-moments"><p class="visor-txt"><%= @profile.username %>' moments</p></div>
-    <div class="moment-carousel" data-flickity='{ "autoPlay": false , "wrapAround": true}'>
+<div class="visor-moments" style="width: 80%;">
+  <div class="moment-carousel" data-flickity='{ "autoPlay": false, "wrapAround": true}'>
     <% @moments.each do |m| %>
       <div class="profile-moment">
         <%= link_to m.event.title, event_path(m.event_id) %>
         <%= m.content %>
       </div>
     <% end %>
-    </div>
   </div>
+</div>
 
-  <div class="visor-events">
-    <div class="visor-header-events"><p class="visor-txt"><%= @profile.username %>' events</p></div>
-    <div class="event-carousel" data-flickity='{ "autoPlay": false, "wrapAround": true}'>
-      <% @events.each do |e| %>
-      <div class="profile-event" style="background-image: url(<%= cl_image_path e.banner %>)">
-        <%= link_to e.title, event_path(e) %>
-      </div>
+<div class="visor-top-songs">
+  <div class="carousel" data-flickity='{ "autoPlay": false, "wrapAround": true}'>
+   <div class="carousel-cell">
+    <% if @profile.spotify_top_1.present? %>
+      <%= spotify_song(@profile.spotify_top_1_uid) %>
     <% end %>
     </div>
-  </div>
-
-  <div class="visor-top-songs">
-    <div class="visor-header-top-songs"><p class="visor-txt"><%= @profile.username %>' Top Songs</p></div>
-    <div class="carousel" data-flickity='{ "autoPlay": false, "wrapAround": true}'>
-     <div class="carousel-cell">
-      <% if @profile.spotify_top_1.present? %>
-        <%= spotify_song(@profile.spotify_top_1_uid) %>
+    <div class="carousel-cell">
+      <% if @profile.spotify_top_2.present? %>
+        <%= spotify_song(@profile.spotify_top_2_uid) %>
       <% end %>
-      </div>
-      <div class="carousel-cell">
-        <% if @profile.spotify_top_2.present? %>
-          <%= spotify_song(@profile.spotify_top_2_uid) %>
-        <% end %>
-      </div>
+    </div>
 
-      <div class="carousel-cell">
-        <% if @profile.spotify_top_3.present? %>
-          <%= spotify_song(@profile.spotify_top_3_uid) %>
-        <% end %>
-      </div>
+    <div class="carousel-cell">
+      <% if @profile.spotify_top_3.present? %>
+        <%= spotify_song(@profile.spotify_top_3_uid) %>
+      <% end %>
+    </div>
 
-      <div class="carousel-cell">
-        <% if @profile.spotify_top_4.present? %>
-          <%= spotify_song(@profile.spotify_top_4_uid) %>
-        <% end %>
-      </div>
+    <div class="carousel-cell">
+      <% if @profile.spotify_top_4.present? %>
+        <%= spotify_song(@profile.spotify_top_4_uid) %>
+      <% end %>
+    </div>
 
-      <div class="carousel-cell">
-        <% if @profile.spotify_top_5.present? %>
-          <%= spotify_song(@profile.spotify_top_5_uid) %>
-        <% end %>
-      </div>
+    <div class="carousel-cell">
+      <% if @profile.spotify_top_5.present? %>
+        <%= spotify_song(@profile.spotify_top_5_uid) %>
+      <% end %>
     </div>
   </div>
 </div>
+
+
