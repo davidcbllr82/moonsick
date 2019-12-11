@@ -1,0 +1,67 @@
+<nav class="uk-navbar uk-navbar-container uk-margin">
+  <div class="uk-navbar-left logo">
+    <span class="uk-navbar-item txt anim-text-flow" href="#">MOONSYC</span>
+  </div>
+  <div>
+    <ul class="uk-navbar-right">
+      <% if user_signed_in? %>
+        <%= link_to profile_path(current_user) do %>
+        <%= cl_image_tag current_user.profile_avatar, class: 'avatar-sidebar' %>
+      <% end %>
+      <div uk-dropdown="animation: uk-animation-slide-top-small; duration: 1000">
+        <ul class="uk-nav uk-dropdown-nav">
+          <li>
+            <%= link_to edit_profile_path(current_user) do %>
+              <h1 class="uk-nav-header icon-action">edit profile</h1>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to new_event_path do %>
+              <h1 class="icon-action">add event</h1>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to destroy_user_session_path, method: :delete do %>
+              <h1 class="icon-index">exit</h1>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+      <li class="uk-active">
+        <%= link_to root_path @current_user do %>
+          <h1 class="icon-index">Moonboard</h1>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to events_path  do %>
+          <h1 class="icon-index">events</h1>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to profiles_path do %>
+          <h1 class="icon-index">friends</h1>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to moments_path do %>
+          <h1 class="icon-index">moments</h1>
+        <% end %>
+      </li>
+    </ul>
+      <% else %>
+        <%= link_to "Login", new_user_session_path, class: "icon-action" %>
+      <% end %>
+  </div>
+  <div class="uk-navbar-right">
+    <a class="uk-navbar-toggle" href="#modal-full" uk-search-icon uk-toggle></a>
+  </div>
+</nav>
+
+<div id="modal-full" class="uk-modal-full uk-modal" uk-modal>
+  <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" uk-height-viewport>
+    <button class="uk-modal-close-full" type="button" uk-close></button>
+    <form class="uk-search uk-search-large">
+      <input class="uk-search-input uk-text-center" type="search" placeholder="Search..." autofocus>
+    </form>
+  </div>
+</div>

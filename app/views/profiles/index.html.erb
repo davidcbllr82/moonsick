@@ -1,9 +1,3 @@
-<div class="title-page">
-  <h1 class="neon" data-text="Friends"></h1>
-  <div class="gradient"></div>
-  <div class="spotlight"></div>
-</div>
-
 <div class="grid-friends">
   <% @profiles.each do |profile| %>
     <%= link_to profile_path(profile), class: 'profile-link' do %>
@@ -14,11 +8,4 @@
       </div>
     <% end %>
   <% end %>
-</div>
-
-<div class="searchbar">
-  <form class="uk-search uk-search-large">
-    <span uk-search-icon></span>
-    <input class="uk-search-input" type="search" placeholder="Search...">
-  </form>
 </div>

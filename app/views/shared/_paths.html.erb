@@ -1,40 +1,41 @@
-<div class="path-list">
-  <% if user_signed_in? %>
-    <%= link_to profile_path(current_user) do %>
-    <%= cl_image_tag current_user.profile_avatar, class: 'avatar-sidebar' %>
-  <% end %>
-  <%= link_to edit_profile_path(current_user) do %>
+<!-- <div class="path-list">
+  <%# if user_signed_in? %>
+    <%#= link_to profile_path(current_user) do %>
+    <%#= cl_image_tag current_user.profile_avatar, class: 'avatar-sidebar' %>
+  <%# end %>
+  <%#= link_to edit_profile_path(current_user) do %>
     <h1 class="icon-action">__edit profile</h1>
-  <% end %>
-  <%= link_to destroy_user_session_path, method: :delete do %>
+  <%# end %>
+  <%#= link_to destroy_user_session_path, method: :delete do %>
     <h1 class="icon-index">__ exit</h1>
-  <% end %>
+  <%# end %>
 
-  <%= link_to new_event_path do %>
+  <%#= link_to new_event_path do %>
     <h1 class="icon-action">__add event</h1>
-  <% end %>
+  <%# end %>
 
 
-  <%= link_to root_path @current_user do %>
+  <%#= link_to root_path @current_user do %>
     <h1 class="icon-index">__ Moonboard</h1>
-  <% end %>
+  <%# end %>
 
-  <%= link_to events_path  do %>
+  <%#= link_to events_path  do %>
     <h1 class="icon-index">__ events</h1>
-  <% end %>
+  <%# end %>
 
-  <%= link_to profiles_path do %>
+  <%#= link_to profiles_path do %>
     <h1 class="icon-index">__friends</h1>
-  <% end %>
+  <%# end %>
 
-  <%= link_to moments_path do %>
+  <%#= link_to moments_path do %>
     <h1 class="icon-index">__ moments</h1>
-  <% end %>
+  <%# end %>
 
-  <%= render 'shared/daynight'; %>
+  <%#= render 'shared/daynight'; %>
 
 
-  <% else %>
-    <%= link_to "__Login", new_user_session_path, class: "icon-action" %>
-  <% end %>
+  <%# else %>
+    <%#= link_to "__Login", new_user_session_path, class: "icon-action" %>
+  <%# end %>
 </div>
+ -->

@@ -1,33 +1,27 @@
 // Change the colors
-$color1: #1ACDB8;
 $color2: #5499CF;
+$color1: #1ACDB8;
 
-.title-page {
+.search-modal-navbar {
+  overflow: hidden;
   position: relative;
   // The blend modes mute the colors, so let's bump them up
   filter: contrast(110%) brightness(190%);
-  background-color: black;
-  z-index: 0;
 }
 .neon {
   position: relative;
-  // Only works on a black background, sorry
-  // The actual text inside the div is superfluous, only data-text matters. The text is added so you can easily edit the preview
+  background: black;
+  height: 100px;
   color: transparent;
 
   &::before,
   &::after {
-    // Add two copies of the text on their own layer
-    content: attr(data-text);
-
-    // White, so we can paint them later
+    content: attr(placeholder);
     color: white;
-
-    // And blur them to create the neon effect with the blend-mode below
-    filter: blur(0.01em);
+    filter: blur(0.02em);
 
     position: absolute;
-    top: 10; left: 0;
+    top: 0; left: 0;
     pointer-events: none;
   }
 
@@ -48,17 +42,15 @@ $color2: #5499CF;
 // Add the colors
 .gradient {
   background: linear-gradient(45deg, $color1, $color2);
-
-  // Multiply mode will paint only the white text
   mix-blend-mode: multiply;
 }
 
 .spotlight {
-  animation: light 25s infinite linear;
+  animation: light 5s infinite linear;
 
   // These are the lights, color-dodge needs a black bg for optimum effect
   background:
-    radial-gradient(circle, white, transparent 25%) 0 0 / 25% 25%,
+    radial-gradient(circle, white, transparent 65%) 0 0 / 25% 25%,
     radial-gradient(circle, white, black 25%) 50% 50% / 12.5% 12.5%;
   top: -100%; left: -100%;
 
@@ -75,13 +67,12 @@ $color2: #5499CF;
 //=== Pen styling, ignore
 
 // Style text
-.neon {
-  font: 3em 'Lato', sans-serif;
+h1.neon {
+  font: 4em 'Lato', sans-serif;
   text-transform: uppercase;
   text-align: center;
-  margin: 20px;
 
-  &:focus { outline: none; border: 1px solid white; }
+  &:focus { outline: none; border: none; }
 }
 .bg-spotlight-blur {
 

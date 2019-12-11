@@ -212,6 +212,7 @@
 .grid-friends {
   display:grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   grid-gap: 80px;
   padding-left: 360px;
   padding-top: 100px;
