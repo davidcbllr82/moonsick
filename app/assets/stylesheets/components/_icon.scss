@@ -1,18 +1,10 @@
 // _icon.scss
 
-.logout {
-}
-
 .icon-action,
 .icon-index {
   // transform: rotate(90deg);
-position: relative;
-top: 200px;
-width: 150px;
-left: 3%;
-font-size: 20px;
-padding-bottom: 40px;
-color: #5C39B4;
+font-size: 15px;
+color: #118F8A;
 }
 .icon-text {
   position: relative;
@@ -21,10 +13,20 @@ color: #5C39B4;
   width: 150px;
 }
 
-.icon-home {
-  position: absolute;
-  top: 30px;
-  left: 25px;
-  width: 40px;
-  height: 40px;
+.logout,
+.icon-edit,
+.icon-create {
+  color:#118F8A;
+  width: 30px;
+  height: 30px;
 }
+
+// <button href="#toggle-animation"
+//   class="avatar-navbar"
+//   type="button"
+//   uk-toggle="target: #toggle-animation;
+//   animation: uk-animation-fade">
+// </button>
+// <div id="toggle-animation"
+//      class="uk-card uk-card-default uk-card-body uk-margin-small">Animation
+// </div>

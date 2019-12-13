@@ -1,50 +1,54 @@
-<nav class="uk-navbar uk-navbar-container uk-margin">
+<nav class="uk-navbar uk-navbar-container uk-navbar-transparent">
   <div class="uk-navbar-left logo">
-    <span class="uk-navbar-item txt anim-text-flow" href="#">MOONSYC</span>
+    <span class="txt anim-text-flow" href="#">MOONSYC</span>
   </div>
   <div>
-    <ul class="uk-navbar-right">
+    <ul class="uk-navbar-item">
       <% if user_signed_in? %>
         <%= link_to profile_path(current_user) do %>
-        <%= cl_image_tag current_user.profile_avatar, class: 'avatar-sidebar' %>
+        <%= cl_image_tag current_user.profile_avatar, class: 'avatar-navbar' %>
       <% end %>
       <div uk-dropdown="animation: uk-animation-slide-top-small; duration: 1000">
         <ul class="uk-nav uk-dropdown-nav">
-          <li>
+          <li class="">
             <%= link_to edit_profile_path(current_user) do %>
-              <h1 class="uk-nav-header icon-action">edit profile</h1>
+              <%= image_tag 'icon-edit.svg', class: 'icon: icon-edit' %>
             <% end %>
           </li>
           <li>
             <%= link_to new_event_path do %>
-              <h1 class="icon-action">add event</h1>
+            <%= image_tag 'icon-create-event.svg', class: 'icon icon-create' %>
             <% end %>
           </li>
           <li>
             <%= link_to destroy_user_session_path, method: :delete do %>
-              <h1 class="icon-index">exit</h1>
+              <%= image_tag 'icon-logout.svg', class: 'logout sidebar-items' %>
             <% end %>
           </li>
         </ul>
       </div>
-      <li class="uk-active">
+      <li class="uk-active" class="uk-navbar-right">
         <%= link_to root_path @current_user do %>
           <h1 class="icon-index">Moonboard</h1>
+          <%= image_tag 'blue-button.svg', class: 'icon-nav' %>
         <% end %>
       </li>
       <li>
         <%= link_to events_path  do %>
           <h1 class="icon-index">events</h1>
+          <%= image_tag 'green-button.svg', class: 'icon-nav' %>
         <% end %>
       </li>
       <li>
         <%= link_to profiles_path do %>
           <h1 class="icon-index">friends</h1>
+          <%= image_tag 'purple-button.svg', class: 'icon-nav' %>
         <% end %>
       </li>
       <li>
         <%= link_to moments_path do %>
           <h1 class="icon-index">moments</h1>
+          <%= image_tag 'red-button.svg', class: 'icon-nav' %>
         <% end %>
       </li>
     </ul>

@@ -24,7 +24,6 @@ $color1: #1ACDB8;
     top: 0; left: 0;
     pointer-events: none;
   }
-
   // Set the top copy to difference. This creates the knock-out effect with a bit of glow
   &::after {
     mix-blend-mode: difference;

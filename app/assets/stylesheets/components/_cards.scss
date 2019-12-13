@@ -1,53 +1,81 @@
 // ======================================================= //
 // >>>>>>>>>>>>>>>>>>>   EVENT_CARD#index   <<<<<<<<<<<<  //
 // ====================================================== //
-.event-card {
+.c-cntnr {
+  border: 1px solid #fff;
   position: relative;
-  background-color: #1a1a1a;
-  color: #fefefe;
-  width: 100%;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 1.2em;
-  line-height: 2;
-  font-weight: 300;
-  text-rendering: optimizeLegibility;
-  text-align: center;
-  margin: 50px;
-  padding: 30px;
-  border-radius: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
   display: flex;
-  vertical-align: middle;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  transform: perspective(1px) translateZ(0);
-  // box-shadow: 0 0 1px transparent;
-  align-items: center;
-  transition-duration: 0.4s;
-  transition-property: box-shadow, transform;
-  a {
-    color: white;
-    font-weight: light;
-    font-size: 1em;
-    &:hover {
-     color: rgb(200, 220, 220);
-      }
-  }
+  flex-wrap: wrap;
+  box-shadow: 0 0 1px transparent;
+  transition-duration: 0.3s;
+  overflow: hidden;
 }
 
-.event-card:hover,
-.event-card:focus,
-.event-card:active {
+.c-cntnr:hover,
+.c-cntnr:focus,
+.c-cntnr:active {
   box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.5);
-  transform: scale(0.1);
+  transform: flip(1.1);
 }
 
-// ======================================================= //
-// >>>>>>>>>>>>>>>>>>>   PROFILE_CARD#index   <<<<<<<<<<<<  //
-// ====================================================== //
+#c-img {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  object-fit: cover;
+  object-position: left bottom;
+  overflow: hidden;
+  border: 1px solid #fff;
+  z-index: 0;
+}
 
+// #c-time {
+//   background-color: #6dc141;
+//   position: absolute;
+//   top: 25%;
+//   left: 25%;
+//   width: 50%;
+//   height: 30%;
+//   object-fit: cover;
+//   border: 1px solid white;
+//   text-align: center;
 
+// }
+#c-header {
+  text-transform: uppercase;
+  flex-wrap: wrap;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position:absolute;
+  top: 16%;
+  right: 16%;
+  z-index: 10;
+  background-color: rgba(232, 60, 104, 0.4);
+  text-align: center;
+  text-rendering: optimizeLegibility;
+}
+// .c-description {
+//   text-overflow: ellipsis;
+//   letter-spacing: 0.2em;
+//   font-size: 1em;
+//   position:absolute;
+//   top: 70%;
+//   z-index: 20;
+//   text-align: center;
+//   text-rendering: optimizeLegibility;
+// }
+#c-link {
+  font-size: 10px;
+  text-transform: uppercase;
+  z-index: 30px;
+}
 
 // ======================================================= //
 // >>>>>>>>>>>>>>>>>>>   EVENT_CARD#SHOW   <<<<<<<<<<  //
@@ -67,7 +95,7 @@
   }
 }
 // ======================================================= //
-// >>>>>>>>>>>>>>>>>>>   EVENT_CARD#INDEX   <<<<<<<<<<  //
+// >>>>>>>>>>>>>>>>>>>   PROFILE_CARD#INDEX   <<<<<<<<<<  //
 // ====================================================== //
 
 .profile-link {
@@ -87,7 +115,6 @@
       margin-right: 10px;
     }
   }
-
   &:hover {
     .profile-card {
       transform: scale(1.2);

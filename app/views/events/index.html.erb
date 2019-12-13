@@ -1,22 +1,25 @@
-<div class="title-container">
-
-  <div class="title-page">
-    <h1 class="neon" data-text="Events"></h1>
-    <div class="gradient"></div>
-    <div class="spotlight"></div>
-  </div>
-
-  <div class="visor-events-friends" style="width: 80%;">
-    <% @events.each do |e| %>
-    <div class="event-card">
-      <%= link_to e.title, event_path(e) %>
-      <%= e.scheduled_at.strftime('%a %b %y %l %M %p') %>
-      <%= cl_image_tag(e.event_avatar, :width=>50, :height=>50, :crop=>"scale")%>
+<div class="visor-events">
+  <% @events.each do |e| %>
+    <div class="c-cntnr uk-card uk-align-left">
+      <div id="c-img">
+        <%= cl_image_tag(e.event_avatar) %>
+      </div>
+      <div id="c-time">
+        <h3 style="color: white;"><%= e.scheduled_at.strftime('%a %b %y') %></h3>
+      </div>
+      <div id="c-header">
+        <p style="color: white;padding: 60px 0px 10px 0px;"><%= e.title %></p>
+      </div>
+      <div class="c-description">
+        <p style="color: white;"><%= e.description %></p>
+      </div>
+      <div id="c-link">
+        <h3><%= link_to '⇨', event_path(e) %></h3>
+      </div>
     </div>
-    <% end %>
-  </div>
-  </div>
+  <% end %>
 </div>
+
 
 
 

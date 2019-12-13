@@ -10,7 +10,7 @@
   $animationDuration: 50;
   $animationElement: span;
   $animationElementsCount: 100;
-  $delayBetweenLetters: 0.2;
+  $delayBetweenLetters: 0.1;
 
   /*
    * Elements settings
@@ -22,7 +22,6 @@
     animation-direction: alternate;
     animation-fill-mode: forwards;
   }
-
   /*
    * Keyframe loop
    */
@@ -63,8 +62,8 @@
 
 .logo {
   position: absolute;
-  top: 7%;
-  left: 7%;
+  top: 20px;
+  right: 60px;
   color: #fefefe;
   width: 10%;
   text-transform: uppercase;
