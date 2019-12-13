@@ -1,59 +1,58 @@
 <nav class="uk-navbar uk-navbar-container uk-navbar-transparent">
   <div class="uk-navbar-left logo">
-    <span class="txt anim-text-flow" href="#">MOONSYC</span>
+    <span class="txt anim-text-flow" href="/">MOONSYC</span>
   </div>
-  <div>
-    <ul class="uk-navbar-item">
+  <div class="uk-flex uk-flex-center">
+    <ul>
       <% if user_signed_in? %>
         <%= link_to profile_path(current_user) do %>
         <%= cl_image_tag current_user.profile_avatar, class: 'avatar-navbar' %>
       <% end %>
-      <div uk-dropdown="animation: uk-animation-slide-top-small; duration: 1000">
+      <div uk-dropdown="animation: uk-animation-slide-top; duration: 1000">
         <ul class="uk-nav uk-dropdown-nav">
-          <li class="">
+          <li class="icon-edit">
             <%= link_to edit_profile_path(current_user) do %>
-              <%= image_tag 'icon-edit.svg', class: 'icon: icon-edit' %>
+              <%= image_tag 'icon-edit.svg', class: 'icon-edit' %>
             <% end %>
           </li>
           <li>
-            <%= link_to new_event_path do %>
-            <%= image_tag 'icon-create-event.svg', class: 'icon icon-create' %>
+            <P class="icon-create"><%= link_to new_event_path do %></P>
+            <%= image_tag 'icon-create-event.svg', class: 'icon-create' %>
             <% end %>
           </li>
-          <li>
+          <li class="logout">
             <%= link_to destroy_user_session_path, method: :delete do %>
-              <%= image_tag 'icon-logout.svg', class: 'logout sidebar-items' %>
+              <%= image_tag 'icon-logout.svg', class: 'logout' %>
             <% end %>
           </li>
         </ul>
       </div>
-      <li class="uk-active" class="uk-navbar-right">
-        <%= link_to root_path @current_user do %>
-          <h1 class="icon-index">Moonboard</h1>
-          <%= image_tag 'blue-button.svg', class: 'icon-nav' %>
-        <% end %>
-      </li>
-      <li>
-        <%= link_to events_path  do %>
-          <h1 class="icon-index">events</h1>
-          <%= image_tag 'green-button.svg', class: 'icon-nav' %>
-        <% end %>
-      </li>
-      <li>
-        <%= link_to profiles_path do %>
-          <h1 class="icon-index">friends</h1>
-          <%= image_tag 'purple-button.svg', class: 'icon-nav' %>
-        <% end %>
-      </li>
-      <li>
-        <%= link_to moments_path do %>
-          <h1 class="icon-index">moments</h1>
-          <%= image_tag 'red-button.svg', class: 'icon-nav' %>
-        <% end %>
-      </li>
-    </ul>
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav">
+          <li class="uk-navbar-item">
+            <%= link_to root_path @current_user do %>
+              <h1 id="icon-index">Moonboard</h1>
+            <% end %>
+          </li>
+          <li class="uk-navbar-item">
+            <%= link_to events_path  do %>
+              <h1 id="icon-index-e">events</h1>
+            <% end %>
+          </li>
+          <li class="uk-navbar-item">
+            <%= link_to profiles_path do %>
+              <h1 id="icon-index-f">friends</h1>
+            <% end %>
+          </li>
+          <li class="uk-navbar-item">
+            <%= link_to moments_path do %>
+              <h1 id="icon-index-m">moments</h1>
+            <% end %>
+          </li>
+        </ul>
+      </div>
       <% else %>
-        <%= link_to "Login", new_user_session_path, class: "icon-action" %>
+        <%= link_to "Login", new_user_session_path, class: "icon-action uk-navbar-item" %>
       <% end %>
   </div>
   <div class="uk-navbar-right">
@@ -62,10 +61,10 @@
 </nav>
 
 <div id="modal-full" class="uk-modal-full uk-modal" uk-modal>
-  <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" uk-height-viewport>
-    <button class="uk-modal-close-full" type="button" uk-close></button>
+  <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" style="background-color:black;" uk-height-50%>
+    <button class="uk-modal-close-full" type="button" uk-close>close</button>
     <form class="uk-search uk-search-large">
-      <input class="uk-search-input uk-text-center" type="search" placeholder="Search..." autofocus>
+      <input class="uk-search-input uk-text-left" type="search" placeholder="Looking for..." autofocus>
     </form>
   </div>
 </div>
