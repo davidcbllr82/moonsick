@@ -1,67 +1,93 @@
-
-<h2 class="profile-name"><%= @profile.username %></h2>
-<div class="overflow-scroll__scroller"><%= @profile.bio %></div>
-<%= simple_form_for([@profile, @friendship]) do |f| %>
-<span><%= f.button :submit, class:"mouse-cursor-gradient-tracking" %></span>
-<% end %>
-<div>
-  <%= cl_image_tag @profile.profile_avatar, class: "avatar-square-profile" %>
-</div>
-<span uk-icon="icon: location"><%= @profile.location %></span><br>
-<span uk-icon="icon: users"><%= @friendships %></span>
-
-<div class="event-carousel" data-flickity='{ "autoPlay": false, "wrapAround": true}'>
-    <% @moments.each do |m| %>
-        <div class="moment-show-event-card" >
-          <%= cl_image_tag(m.user.profile_avatar, class: 'avatar')%>
-          <h3><%= m.user.username %></h3>
-          <p><%= m.content %></p>
+<div class="visor-profile">
+  <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" uk-grid>
+    <div class="uk-card-media-left uk-cover-container">
+      <div class="uk-padding-left uk-padding-remove-bottom" uk-cover><%= cl_image_tag @profile.profile_banner %></div>
+    </div>
+    <div class="uk-flex">
+      <div class="uk-card-body uk-background-muted uk-padding-bottom
+      ">
+        <div class="uk-align-center">
+          <%= cl_image_tag @profile.profile_avatar, class: 'avatar-show-card' %>
+          <h1 class="uk-text-large uk-text-bold profile-name"><%= @profile.username %></h1>
+          <h5 class="uk-padding-remove"><%= @profile.location %></h5>
+          <h5 class="uk-padding-remove"><%= @friendships %></h5>
+          <%= simple_form_for([@profile, @friendship]) do |f| %>
+          <div class="uk-padding-bottom"><%= f.button :submit, class:"uk-button uk-button-secondary" %></div>
+          <% end %>
+          <ul class="uk-breadcrumb uk-width-1-1 uk-padding-remove">
+            <li class="uk-padding-bottom"><a href="#"></a>Sound</li>
+            <li class="uk-padding-bottom"><a href="#"></a>Apple</li>
+            <li class="uk-padding-bottom"><a href="#"></a>Spot</li>
+          </ul>
         </div>
-    <% end %>
-</div>
-
-<div class="visor-moments" style="width: 80%;">
-  <div class="moment-carousel" data-flickity='{ "autoPlay": false, "wrapAround": true}'>
-    <% @moments.each do |m| %>
-      <div class="profile-moment">
-        <%= link_to m.event.title, event_path(m.event_id) %>
-        <%= m.content %>
       </div>
-    <% end %>
+      <div class="uk-padding-small uk-card-body uk-background-muted">
+        <div class="uk-card-badge uk-label-warning">#partygoer</div>
+        <div class="uk-card-badge uk-label">#latenightguy</div>
+        <h3 class="uk-card-title uk-text-bold profile-moments">Moments</h3>
+        <div class="container-moment-profile uk-padding-bottom">
+          <div class="uk-card uk-card-default uk-grid-collapse  uk-child-width-1-2@s" uk-grid>
+            <% @moments.each do |m| %>
+              <div class="uk-card-media-right uk-cover-container uk-padding">
+                <div uk-cover><%= cl_image_tag m.event.banner %></div>
+              </div>
+              <div>
+                <div class="uk-card-body">
+                  <h4> <%= link_to m.event.title, event_path(m.event_id) %></h4>
+                  <p><%= m.content %></p>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="uk-card-body uk-background-muted uk-padding">
+      <h4 class="uk-text-bold uk-padding-remove-top uk-text-center profile-about uk-width-1-1">
+      About
+      </h4>
+      <div class="overflow-scroll__scroller uk-width-1-1 uk-padding-remove">
+        <div class="uk-padding-small"><%= @profile.bio %></div>
+      </div>
+    </div>
+    <div class="profile-top-songs uk-padding-top uk-card-footer uk-background-muted">
+      <h4 class="uk-text-bold uk-text-center profile-topsongs uk-padding-top">Top songs</h4>
+      <div class="carousel uk-padding-top" data-flickity='{ "autoPlay": true, "wrapAround": true}'>
+       <div class="carousel-cell">
+        <% if @profile.spotify_top_1.present? %>
+          <%= spotify_song(@profile.spotify_top_1_uid) %>
+        <% end %>
+        </div>
+        <div class="carousel-cell">
+          <% if @profile.spotify_top_2.present? %>
+            <%= spotify_song(@profile.spotify_top_2_uid) %>
+          <% end %>
+        </div>
+        <div class="carousel-cell">
+          <% if @profile.spotify_top_3.present? %>
+            <%= spotify_song(@profile.spotify_top_3_uid) %>
+          <% end %>
+        </div>
+        <div class="carousel-cell">
+          <% if @profile.spotify_top_4.present? %>
+            <%= spotify_song(@profile.spotify_top_4_uid) %>
+          <% end %>
+        </div>
+        <div class="carousel-cell">
+          <% if @profile.spotify_top_5.present? %>
+            <%= spotify_song(@profile.spotify_top_5_uid) %>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="visor-top-songs">
-  <div class="carousel" data-flickity='{ "autoPlay": false, "wrapAround": true}'>
-   <div class="carousel-cell">
-    <% if @profile.spotify_top_1.present? %>
-      <%= spotify_song(@profile.spotify_top_1_uid) %>
-    <% end %>
-    </div>
-    <div class="carousel-cell">
-      <% if @profile.spotify_top_2.present? %>
-        <%= spotify_song(@profile.spotify_top_2_uid) %>
-      <% end %>
-    </div>
 
-    <div class="carousel-cell">
-      <% if @profile.spotify_top_3.present? %>
-        <%= spotify_song(@profile.spotify_top_3_uid) %>
-      <% end %>
-    </div>
 
-    <div class="carousel-cell">
-      <% if @profile.spotify_top_4.present? %>
-        <%= spotify_song(@profile.spotify_top_4_uid) %>
-      <% end %>
-    </div>
 
-    <div class="carousel-cell">
-      <% if @profile.spotify_top_5.present? %>
-        <%= spotify_song(@profile.spotify_top_5_uid) %>
-      <% end %>
-    </div>
-  </div>
-</div>
+
+
+
 
 

@@ -1,11 +1,25 @@
-<div class="title-page">
-  <h1 class="neon" data-text="Moments"></h1>
-  <div class="gradient"></div>
-  <div class="spotlight"></div>
+
+<div class="visor-index-moments">
+  <% @moments.each do |m| %>
+    <div class="c-cntnr uk-card uk-align-left">
+      <div class="uk-overlay uk-position-top">
+        <h3 id="c-link">
+          <%= link_to 'Revisit', event_path(m.event_id) %>
+        </h3>
+      </div>
+      <div id="c-img uk-inline">
+        <%= cl_image_tag(m.user.profile_avatar, class: 'avatar-index-moment')%>
+      </div>
+      <div id="c-time">
+        <h5 style="color: black;padding-top: 3px"><%= m.created_at.strftime('%a %b %y') %></h5>
+      </div>
+      <div id="c-header">
+        <h3 style="color: white;padding: 10px 0px;"><%= m.event.title %></h3>
+      </div>
+      <div class="c-description">
+        <p style="color: white;"><%= m.content %></p>
+      </div>
+    </div>
+  <% end %>
 </div>
 
-<% @moments.each do |moment| %>
-  <%= moment.user.username %>
-  <%#= moment.profile.profile_avatar %>
-  <%= moment.content %>
-<% end %>

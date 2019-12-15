@@ -9,8 +9,8 @@
         <%= cl_image_tag current_user.profile_avatar, class: 'avatar-navbar' %>
       <% end %>
       <div uk-dropdown="animation: uk-animation-slide-top; duration: 1000">
-        <ul class="uk-nav uk-dropdown-nav">
-          <li class="icon-edit">
+        <ul class="uk-nav uk-dropdown-nav uk-iconnav">
+          <li class="icon-edit" uk-icon="icon: check">
             <%= link_to edit_profile_path(current_user) do %>
               <%= image_tag 'icon-edit.svg', class: 'icon-edit' %>
             <% end %>
@@ -28,25 +28,25 @@
         </ul>
       </div>
       <div class="uk-navbar-right">
-        <ul class="uk-navbar-nav">
+        <ul class="uk-navbar-nav uk-nav">
           <li class="uk-navbar-item">
             <%= link_to root_path @current_user do %>
-              <h1 id="icon-index">Moonboard</h1>
+              <h1 id="">Moonboard</h1>
             <% end %>
           </li>
           <li class="uk-navbar-item">
             <%= link_to events_path  do %>
-              <h1 id="icon-index-e">events</h1>
+              <h1 id="">events</h1>
             <% end %>
           </li>
           <li class="uk-navbar-item">
             <%= link_to profiles_path do %>
-              <h1 id="icon-index-f">friends</h1>
+              <h1 id="">friends</h1>
             <% end %>
           </li>
           <li class="uk-navbar-item">
             <%= link_to moments_path do %>
-              <h1 id="icon-index-m">moments</h1>
+              <h1 id="">moments</h1>
             <% end %>
           </li>
         </ul>

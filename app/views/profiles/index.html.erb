@@ -1,11 +1,21 @@
-<div class="grid-friends">
+<div class="visor-index-friends">
   <% @profiles.each do |profile| %>
     <%= link_to profile_path(profile), class: 'profile-link' do %>
-      <div class="profile-card">
-        <%= cl_image_tag(profile.profile_avatar, class:'avatar')%>
-        <%= profile.username %><br>
-        <%= profile.location %>
-      </div>
+      <div class="uk-card uk-card-default c-cntnr-friends">
+        <div class="uk-card-media-top">
+          <%= cl_image_tag(profile.profile_avatar) %>
+        </div>
+        <div class="uk-card-body">
+          <h3><%= profile.username %></h3>
+          <h5><%= profile.location %></h5>
+          <p style="color: black;"><%= profile.bio %></p>
+        </div>
+        <div class="uk-card-footer">
+          <% if profile.spotify_top_1.present? %>
+            <%= spotify_song(profile.spotify_top_1_uid) %>
+          <% end %>
+        </div>
     <% end %>
   <% end %>
+      </div>
 </div>

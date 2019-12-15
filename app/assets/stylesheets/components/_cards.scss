@@ -1,8 +1,32 @@
 // ======================================================= //
-// >>>>>>>>>>>>>>>>>>>   EVENT_CARD#index   <<<<<<<<<<<<  //
+// Events-Moments-Friends card #INDEX   <<<<<<<<<<<<  //
 // ====================================================== //
 .c-cntnr {
-  border: 3px solid #6dc141;
+  border: 3px solid #f5e652;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 0 1px transparent;
+  transition-duration: 0.3s;
+  overflow: hidden;
+}
+
+.c-cntnr-friends {
+  border: 3px solid #f5e652;
+  position: relative;
+  width: 400px;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 0 1px transparent;
+  transition-duration: 0.3s;
+  overflow: hidden;
+}
+.c-cntnr-moments {
+  border: 3px solid #f5e652;
   position: relative;
   width: 200px;
   height: 200px;
@@ -23,58 +47,67 @@
 
 #c-img {
   position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 100%;
+  top: 0%;
+  right: 0%;
   object-fit: cover;
-  object-position: left bottom;
+  object-position: center;
   overflow: hidden;
-  border: 1px solid #fff;
-  z-index: 0;
+  z-index: 10;
 }
 
-// #c-time {
-//   background-color: #6dc141;
-//   position: absolute;
-//   top: 25%;
-//   left: 25%;
-//   width: 50%;
-//   height: 30%;
-//   object-fit: cover;
-//   border: 1px solid white;
-//   text-align: center;
-
-// }
+#c-time {
+  background-color: #f5e652;
+  position: absolute;
+  bottom: -5%;
+  left: 6%;
+  width: 170px;
+  height: 40px;
+  object-fit: cover;
+  text-align: center;
+  z-index: 30;
+  overflow: visible;
+}
 #c-header {
+  cursor: pointer;
   text-transform: uppercase;
   flex-wrap: wrap;
-  font-weight: 400;
-  letter-spacing: 0.2em;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  font-size: 0.8em;
+  width: 200px;
+  height: 70px;
+  // border-radius: 50%;
   position: absolute;
-  top: 25%;
-  right: 20%;
-  z-index: 10;
-  background-color: rgba(232, 60, 104, 0.7);
+  bottom: 10%;
+  left: 0%;
+  z-index: 20;
+  background-color: rgba(74, 39, 183, 0.7);
+  text-align: center;
+  text-overflow: ellipsis;
+  text-rendering: optimizeLegibility;
+}
+.c-description {
+  text-overflow: ellipsis;
+  opacity: 0%;
+  letter-spacing: 0.2em;
+  font-size: 1em;
+  position:absolute;
+  top: 70%;
+  z-index: 0;
   text-align: center;
   text-rendering: optimizeLegibility;
 }
-// .c-description {
-//   text-overflow: ellipsis;
-//   letter-spacing: 0.2em;
-//   font-size: 1em;
-//   position:absolute;
-//   top: 70%;
-//   z-index: 20;
-//   text-align: center;
-//   text-rendering: optimizeLegibility;
-// }
 #c-link {
-  font-size: 10px;
-  text-transform: uppercase;
-  z-index: 30px;
+  font-size: 1em;
+  z-index: 50px;
+  position: absolute;
+  top: 0%;
+  left: 6%;
+  width: 170px;
+  height: 20px;
+  object-fit: cover;
+  text-align: center;
+  background-color: rgba(51, 51, 51, 1);
 }
 
 // ======================================================= //
@@ -98,29 +131,25 @@
 // >>>>>>>>>>>>>>>>>>>   PROFILE_CARD#INDEX   <<<<<<<<<<  //
 // ====================================================== //
 
-.profile-link {
-  position: relative;
-  color: white;
-  justify-content: end;
-  margin-right: -100px;
-  .profile-card {
-    display: flex;
-    align-items: flex-start;
-    font-weight: thin;
-    font-size: 15px;
-    transform: perspective(-10px) translateZ(4);
-    transition-duration: 0.3s;
-    transition-property: transform;
-    img {
+.profile-card {
+  display: flex;
+  align-items: flex-start;
+  font-weight: thin;
+  font-family: Inconsolata;
+  font-size: 15px;
+  transform: perspective(-10px) translateZ(4);
+  transition-duration: 0.3s;
+  transition-property: transform;
+  img {
       margin-right: 10px;
-    }
-  }
-  &:hover {
-    .profile-card {
-      transform: scale(1.2);
+      &:hover {
+        .profile-card {
+         transform: scale(1.2);
+      }
     }
   }
 }
+
 
 // ======================================================= //
 // >>>>>>>>>>>>>>>>>>   PROFILE_MOMENT_CARD   <<<<<<<<<  //
@@ -129,8 +158,8 @@
 .profile-moment {
   background: white;
   padding: 5px;
-  height: 5%;
-  width: 20%;
+  height: 10%;
+  width: 10%;
   border-radius: 3px;
   font-size: 14px;
   a {
