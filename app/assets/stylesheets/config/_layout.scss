@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // // OVERALL GRID
 // .layout-primary {
 //   position: absolute;
@@ -10,6 +11,19 @@
 //   align-content: center;
 //   align-items: center;
 // }
+=======
+// OVERALL GRID
+.layout-primary {
+  display: grid;
+  grid-template-columns: 115px 1fr;
+  min-height: 100vh;
+  background-color: #F7F5EE;
+
+  &-active{
+    grid-template-columns: 180px 1fr;
+  }
+}
+>>>>>>> master
 // PROFILE__EDIT, EVENT__EDIT, PROFILE__CREATE, EVENT__CREATE //
 
 #content {

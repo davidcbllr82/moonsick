@@ -1,8 +1,19 @@
 // ======================================================= //
+<<<<<<< HEAD
 // Events-Moments-Friends card #INDEX   <<<<<<<<<<<<  //
 // ====================================================== //
 .c-cntnr {
   border: 3px solid yellow;
+=======
+// >>>>>>>>>>>>>>>>>>>   EVENT_CARD   <<<<<<<<<<<<<<<<<<<  //
+// ====================================================== //
+
+.event-card {
+  background: linear-gradient(to right, #f79d00, #64f38c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin: 30px;
+  padding: 20px;
+  border-radius: 5px;
+>>>>>>> master
   display: flex;
   flex-wrap: wrap;
   box-shadow: 0 0 1px transparent;
@@ -10,6 +21,7 @@
   overflow: hidden;
 }
 
+<<<<<<< HEAD
 .c-cntnr-friends {
   border: 3px solid #f5e652;
   position: relative;
@@ -57,6 +69,11 @@
 .c-cntnr:hover,
 .c-cntnr:focus,
 .c-cntnr:active {
+=======
+.event-card:hover,
+.event-card:focus,
+.event-card:active {
+>>>>>>> master
   box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.5);
   transform: flip(1.1);
 }
@@ -110,7 +127,11 @@
 }
 
 // ======================================================= //
+<<<<<<< HEAD
 // >>>>>>>>>>>>>>>>>>>   EVENT_CARD#SHOW   <<<<<<<<<<  //
+=======
+// >>>>>>>>>>>>>>>>>>>   PROFILE_EVENT_CARD   << <<<<<<<<  //
+>>>>>>> master
 // ====================================================== //
 
 .profile-event {
@@ -130,6 +151,7 @@
 // >>>>>>>>>>>>>>>>>>>   PROFILE_CARD#INDEX   <<<<<<<<<<  //
 // ====================================================== //
 
+<<<<<<< HEAD
 .profile-card {
   display: flex;
   align-items: flex-start;
@@ -140,6 +162,19 @@
   transition-duration: 0.3s;
   transition-property: transform;
   img {
+=======
+.profile-link {
+  .profile-card {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: transform;
+
+    img {
+>>>>>>> master
       margin-right: 10px;
       &:hover {
         .profile-card {
@@ -159,6 +194,27 @@
 }
 .mytitle {
 
+<<<<<<< HEAD
+=======
+// ======================================================= //
+// >>>>>>>>>>>>>>>>>>>   PROFILE_MOMENT_CARD   << <<<<<<<<  //
+// ====================================================== //
+
+.profile-moment {
+  background: linear-gradient(to right, #fffbd5, #b20a2c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 50px;
+  height: 170px;
+  width: 270px;
+  border-radius: 3px;
+  a {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    &:hover {
+     color: rgb(200, 220, 220);
+      }
+  }
+>>>>>>> master
 }
 .myparagraph {
   font-family: 'Red Hat Display';
@@ -177,6 +233,7 @@
 }
 .mysubtitle {
 
+<<<<<<< HEAD
 }
 .mylink {
   font-size: 20px;
@@ -196,6 +253,17 @@
   position: absolute;
   top: 0%;
   right: 0%;
+=======
+.moment-show-event-card {
+  background: linear-gradient(to right, #b92b27, #1565c0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 50px;
+  height: 300px;
+  width: 270px;
+  border-radius: 3px;
+  h3 {
+    font-weight: bold;
+  }
+>>>>>>> master
 }
 
 
