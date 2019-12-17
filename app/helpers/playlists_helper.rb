@@ -3,8 +3,10 @@ module PlaylistsHelper
     url = "https://open.spotify.com/embed/playlist/#{spotify_playlist_id}"
 
     tag.iframe src: url,
-               width: 500,
-               height: 620,
+               bottom: 0,
+               right: 0,
+               width: 220,
+               height: 100,
                frameborder: 0,
                allowtransparency: true,
                allow: "encrypted-media"

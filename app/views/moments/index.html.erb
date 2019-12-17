@@ -1,25 +1,29 @@
-
-<div class="visor-index-moments">
-  <% @moments.each do |m| %>
-    <div class="c-cntnr uk-card uk-align-left">
-      <div class="uk-overlay uk-position-top">
-        <h3 id="c-link">
-          <%= link_to 'Revisit', event_path(m.event_id) %>
-        </h3>
-      </div>
-      <div id="c-img uk-inline">
-        <%= cl_image_tag(m.user.profile_avatar, class: 'avatar-index-moment')%>
-      </div>
-      <div id="c-time">
-        <h5 style="color: black;padding-top: 3px"><%= m.created_at.strftime('%a %b %y') %></h5>
-      </div>
-      <div id="c-header">
-        <h3 style="color: white;padding: 10px 0px;"><%= m.event.title %></h3>
-      </div>
-      <div class="c-description">
-        <p style="color: white;"><%= m.content %></p>
-      </div>
+<div class="visor-index-events">
+  <div class="uk-flex uk-flex-center " uk-grid="parallax: 150" uk-flex>
+    <% @moments.each do |m| %>
+      <div class="mymoment uk-card uk-width-1-2 uk-grid-large uk-background-cover uk-background-fixed uk-background-center-right" style="background-image: url('<%= cl_image_path m.event.banner %>');" uk-grid>
+        <div class="uk-card-body uk-flex-middle uk-text-left" uk-scrollspy="cls: uk-animation-fade; target: .myavatar, .mylink, .myparagraph; delay: 850; repeat: true">
+          <h5 class="mylink">
+            Remember <%= link_to m.event.title,  event_path(m.event_id) %><br><br>
+            on <%= m.created_at.strftime('%b %a %y') %> ?
+          </h5>
+        <div class="myavatar uk-overlay-primary uk-background-cover uk-background-blend-multiply  uk-background-center-left">
+          <%= cl_image_tag(m.user.profile_avatar, class: 'avatar-xl-large')%>
+        </div>
+        <div class="myparagraph uk-card-body uk-text-center">
+          <quote>" <%= m.content %> "</quote>
+        </div>
+          <!-- <h2 class="mytitle">Event: <%#= m.event.title %></h2>
+        <div class="">
+          <h5 class="mysubtitle">
+            Reviewed:<br><%#= m.created_at.strftime('%b %a %y') %>
+          </h5>
+        </div>
+        </div>
+      </div> -->
+     </div>
     </div>
   <% end %>
+  </div>
 </div>
 

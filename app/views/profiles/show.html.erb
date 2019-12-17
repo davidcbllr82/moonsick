@@ -1,59 +1,54 @@
 <div class="visor-profile">
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" uk-grid>
-    <div class="uk-card-media-left uk-cover-container">
-      <div class="uk-padding-left uk-padding-remove-bottom" uk-cover><%= cl_image_tag @profile.profile_banner %></div>
+    <div class="uk-card-media-left uk-cover-container uk-background-mute">
+      <div class="uk-padding-remove-bottom" uk-cover><%= cl_image_tag @profile.profile_banner %></div>
     </div>
     <div class="uk-flex">
-      <div class="uk-card-body uk-background-muted uk-padding-bottom
-      ">
-        <div class="uk-align-center">
+      <div class="uk-card-body uk-background-muted uk-padding-bottom">
+        <div class="uk-align-center uk-width-1-1">
           <%= cl_image_tag @profile.profile_avatar, class: 'avatar-show-card' %>
-          <h1 class="uk-text-large uk-text-bold profile-name"><%= @profile.username %></h1>
-          <h5 class="uk-padding-remove"><%= @profile.location %></h5>
-          <h5 class="uk-padding-remove"><%= @friendships %></h5>
+          <h1 class="uk-text-large uk-text-bold profile-name uk-background-mute"><%= @profile.username %></h1>
+          <h5 class="uk-padding-right uk-padding-left"><%= image_tag 'icon-location.svg', class: 'icon' %>   <%= @profile.location %></h5>
+          <h5 class="uk-padding-right uk-padding-large-left"><%= image_tag 'icon-friends.svg', class: 'icon' %>   <%= @friendships %></h5>
           <%= simple_form_for([@profile, @friendship]) do |f| %>
-          <div class="uk-padding-bottom"><%= f.button :submit, class:"uk-button uk-button-secondary" %></div>
+          <div><%= f.button :submit, class:"uk-button uk-button-secondary" %></div>
           <% end %>
-          <ul class="uk-breadcrumb uk-width-1-1 uk-padding-remove">
-            <li class="uk-padding-bottom"><a href="#"></a>Sound</li>
-            <li class="uk-padding-bottom"><a href="#"></a>Apple</li>
-            <li class="uk-padding-bottom"><a href="#"></a>Spot</li>
+          <ul class="uk-breadcrumb">
+            <li class="uk-padding-remove"><a href="#"></a><%= image_tag 'Soundcloud-logo.svg', class: 'music-logo' %></li>
+            <li class="uk-padding-remove"><a href="#"></a><%= image_tag 'spotify-logo.svg', class: 'music-logo' %></li>
+            <li class="uk-padding-remove"><a href="#"></a><%= image_tag 'apple-logo.svg', class: 'music-logo' %></li>
           </ul>
         </div>
       </div>
-      <div class="uk-padding-small uk-card-body uk-background-muted">
-        <div class="uk-card-badge uk-label-warning">#partygoer</div>
-        <div class="uk-card-badge uk-label">#latenightguy</div>
-        <h3 class="uk-card-title uk-text-bold profile-moments">Moments</h3>
-        <div class="container-moment-profile uk-padding-bottom">
+      <div class=" uk-padding-remove-bottom uk-card-body uk-background-muted">
+        <h3 class="uk-card-title uk-text-bold text-align-center profile-moments">Moments</h3>
+        <div class="container-moment-profile uk-width-1-1 uk-padding-bottom">
           <div class="uk-card uk-card-default uk-grid-collapse  uk-child-width-1-2@s" uk-grid>
             <% @moments.each do |m| %>
-              <div class="uk-card-media-right uk-cover-container uk-padding">
+              <div class="uk-card-media-left uk-cover-container uk-padding-bottom">
                 <div uk-cover><%= cl_image_tag m.event.banner %></div>
               </div>
-              <div>
-                <div class="uk-card-body">
-                  <h4> <%= link_to m.event.title, event_path(m.event_id) %></h4>
-                  <p><%= m.content %></p>
-                </div>
+              <div class="uk-card uk-card-small uk-card-body uk-card-hover">
+                <h4><%= link_to m.event.title, event_path(m.event_id) %></h4>
+                <p><%= m.content %></p>
               </div>
             <% end %>
           </div>
         </div>
       </div>
     </div>
-    <div class="uk-card-body uk-background-muted uk-padding">
-      <h4 class="uk-text-bold uk-padding-remove-top uk-text-center profile-about uk-width-1-1">
+    <div class="uk-card-body uk-background-muted">
+      <h2 class="uk-text-bold uk-text-center profile-about uk-width-1-1">
       About
-      </h4>
-      <div class="overflow-scroll__scroller uk-width-1-1 uk-padding-remove">
-        <div class="uk-padding-small"><%= @profile.bio %></div>
+      </h2>
+      <div class="overflow-scroll__scroller uk-width-1-1 ">
+        <div class=""><%= @profile.bio %></div>
       </div>
     </div>
-    <div class="profile-top-songs uk-padding-top uk-card-footer uk-background-muted">
-      <h4 class="uk-text-bold uk-text-center profile-topsongs uk-padding-top">Top songs</h4>
-      <div class="carousel uk-padding-top" data-flickity='{ "autoPlay": true, "wrapAround": true}'>
-       <div class="carousel-cell">
+    <div class="profile-top-songs uk-card-footer uk-background-muted">
+      <h2 class="uk-text-bold uk-text-center profile-topsongs ">Top songs</h2>
+      <div class="carousel" data-flickity='{ "autoPlay": true, "wrapAround": true}'>
+       <div class="carousel-cell uk-padding-remove-bottom">
         <% if @profile.spotify_top_1.present? %>
           <%= spotify_song(@profile.spotify_top_1_uid) %>
         <% end %>
