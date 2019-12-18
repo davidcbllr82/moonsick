@@ -1,14 +1,13 @@
-<div class="layout__edit__create-page">
-  <div class="header-container">
-    <h1 class="title-header">Edit your profile</h1>
-    <p class="hover-underline-animation"></p>
+<div>
+  <div class="title-page">
+    <h1 class="neon" data-text="Sign up" contenteditable></h1>
+    <div class="gradient"></div>
+    <div class="spotlight"></div>
   </div>
   <%= simple_form_for(current_user, url: profile_path) do |e| %>
-    <div class="form-edit-profile">
-      <%= e.label :username %>
-      <%= e.text_field :username %>
-
-
+  <div class="form-edit-profile">
+    <%= e.label :username %>
+    <%= e.text_field :username %>
     <%= e.input :date_of_birth,
                 as: :date, start_year: Date.today.year - 90,
                 end_year: Date.today.year - 12,
@@ -43,6 +42,6 @@
       <%= e.text_field :spotify_top_5%>
 
       <%= e.submit %>
-    <% end %>
+  <% end %>
   </div>
 </div>

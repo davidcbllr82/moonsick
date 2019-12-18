@@ -1,3 +1,33 @@
+<<<<<<< HEAD
+<div class="uk-child-width-1-4 uk-grid-small uk-grid-medium uk-text-center" uk-grid>
+  <div class="visor-index-events">
+    <% @events.each do |e| %>
+      <div class="c-cntnr uk-card uk-card-default uk-card-body">
+        <div class="uk-overlay uk-position-top">
+          <h3 id="c-link"><%= link_to 'info +', event_path(e) %></h3>
+        </div>
+        <div id="c-img">
+          <%= cl_image_tag(e.event_avatar) %>
+        </div>
+        <div id="c-time">
+          <h4 style="color: black;padding-top: 3px"><%= e.scheduled_at.strftime('%a %b %y') %></h4>
+        </div>
+        <div id="c-header">
+          <p style="color: white;padding: 10px 0px;"><%= e.title %></p>
+        </div>
+        <div class="c-description">
+          <p style="color: white;"><%= e.description %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+
+=======
 <div class="">
   <p class="hover-underline-animation">Create a new event</p>
 </div>
@@ -22,3 +52,4 @@
   </div>
   <% end %>
 </div>
+>>>>>>> master

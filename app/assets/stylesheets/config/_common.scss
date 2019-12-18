@@ -1,6 +1,6 @@
 // _common.scss
 @import url('https://fonts.googleapis.com/css?family=Raleway|Ramabhadra|Rationale|Red+Hat+Display|Red+Hat+Text:400,500,700|Roboto+Condensed|Rubik+Mono+One|Scada:400,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
 // COLORS
 $red: #FD1015;
 $blue: #167FFB;
@@ -13,8 +13,8 @@ $light-gray: #F4F4F4;
 // GRADIENT
 
 // FONTS
-$body-font: "Open Sans", "Helvetica", "sans-serif";
-$headers-font: "Raleway", "Helvetica", "sans-serif";
-$buttons-font: "Rationale", "sans-serif";
+$body-font: "Inconsolata", "Helvetica", "sans-serif";
+$header-font: "Red Hat Display", "Helvetica", "sans-serif";
+$button-font: "Rationale", "sans-serif";
 
 // BOX SHADOWS

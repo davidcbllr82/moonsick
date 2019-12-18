@@ -1,3 +1,81 @@
+<<<<<<< HEAD
+<div class="visor-profile">
+  <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" uk-grid>
+    <div class="uk-card-media-left uk-cover-container uk-background-mute">
+      <div class="uk-padding-remove-bottom" uk-cover><%= cl_image_tag @profile.profile_banner %></div>
+    </div>
+    <div class="uk-flex">
+      <div class="uk-card-body uk-background-muted uk-padding-bottom">
+        <div class="uk-align-center uk-width-1-1">
+          <%= cl_image_tag @profile.profile_avatar, class: 'avatar-show-card' %>
+          <h1 class="uk-text-large uk-text-bold profile-name uk-background-mute"><%= @profile.username %></h1>
+          <h5 class="uk-padding-right uk-padding-left"><%= image_tag 'icon-location.svg', class: 'icon' %>   <%= @profile.location %></h5>
+          <h5 class="uk-padding-right uk-padding-large-left"><%= image_tag 'icon-friends.svg', class: 'icon' %>   <%= @friendships %></h5>
+          <%= simple_form_for([@profile, @friendship]) do |f| %>
+          <div><%= f.button :submit, class:"uk-button uk-button-secondary" %></div>
+          <% end %>
+          <ul class="uk-breadcrumb">
+            <li class="uk-padding-remove"><a href="#"></a><%= image_tag 'Soundcloud-logo.svg', class: 'music-logo' %></li>
+            <li class="uk-padding-remove"><a href="#"></a><%= image_tag 'spotify-logo.svg', class: 'music-logo' %></li>
+            <li class="uk-padding-remove"><a href="#"></a><%= image_tag 'apple-logo.svg', class: 'music-logo' %></li>
+          </ul>
+        </div>
+      </div>
+      <div class=" uk-padding-remove-bottom uk-card-body uk-background-muted">
+        <h3 class="uk-card-title uk-text-bold text-align-center profile-moments">Moments</h3>
+        <div class="container-moment-profile uk-width-1-1 uk-padding-bottom">
+          <div class="uk-card uk-card-default uk-grid-collapse  uk-child-width-1-2@s" uk-grid>
+            <% @moments.each do |m| %>
+              <div class="uk-card-media-left uk-cover-container uk-padding-bottom">
+                <div uk-cover><%= cl_image_tag m.event.banner %></div>
+              </div>
+              <div class="uk-card uk-card-small uk-card-body uk-card-hover">
+                <h4><%= link_to m.event.title, event_path(m.event_id) %></h4>
+                <p><%= m.content %></p>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="uk-card-body uk-background-muted">
+      <h2 class="uk-text-bold uk-text-center profile-about uk-width-1-1">
+      About
+      </h2>
+      <div class="overflow-scroll__scroller uk-width-1-1 ">
+        <div class=""><%= @profile.bio %></div>
+      </div>
+    </div>
+    <div class="profile-top-songs uk-card-footer uk-background-muted">
+      <h2 class="uk-text-bold uk-text-center profile-topsongs ">Top songs</h2>
+      <div class="carousel" data-flickity='{ "autoPlay": true, "wrapAround": true}'>
+       <div class="carousel-cell uk-padding-remove-bottom">
+        <% if @profile.spotify_top_1.present? %>
+          <%= spotify_song(@profile.spotify_top_1_uid) %>
+        <% end %>
+        </div>
+        <div class="carousel-cell">
+          <% if @profile.spotify_top_2.present? %>
+            <%= spotify_song(@profile.spotify_top_2_uid) %>
+          <% end %>
+        </div>
+        <div class="carousel-cell">
+          <% if @profile.spotify_top_3.present? %>
+            <%= spotify_song(@profile.spotify_top_3_uid) %>
+          <% end %>
+        </div>
+        <div class="carousel-cell">
+          <% if @profile.spotify_top_4.present? %>
+            <%= spotify_song(@profile.spotify_top_4_uid) %>
+          <% end %>
+        </div>
+        <div class="carousel-cell">
+          <% if @profile.spotify_top_5.present? %>
+            <%= spotify_song(@profile.spotify_top_5_uid) %>
+          <% end %>
+        </div>
+      </div>
+=======
 <div class="container container-fluid">
   <div class="profile-information">
     <%= cl_image_tag @profile.profile_avatar, class: "avatar-square-profile" %>
@@ -31,9 +109,21 @@
         <%= m.content %>
       </div>
     <% end %>
+>>>>>>> master
     </div>
   </div>
+</div>
 
+<<<<<<< HEAD
+
+
+
+
+
+
+
+
+=======
   <div class="visor-events">
     <div class="visor-header-events"><p class="visor-txt"><%= @profile.username %>' events</p></div>
     <div class="event-carousel" data-flickity='{ "autoPlay": false, "wrapAround": true}'>
@@ -79,3 +169,4 @@
     </div>
   </div>
 </div>
+>>>>>>> master

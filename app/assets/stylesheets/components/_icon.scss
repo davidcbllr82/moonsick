@@ -1,5 +1,32 @@
 // _icon.scss
 
+<<<<<<< HEAD
+.icon-text {
+  position: relative;
+  top: 100px;
+  font: 14px;
+  width: 150px;
+}
+
+.logout,
+.icon-edit,
+.icon-create {
+  color:black;
+  width: 30px;
+  height: 30px;
+}
+.uk-search-icon {
+  position: absolute;
+  top: 90px;
+  right: 200px;
+  width: 30px;
+  height: 30px;
+}
+
+.close-icon {
+  color: white;
+  background-color: black;
+=======
 .icon {
   width: 20px;
   height: 20px;
@@ -23,4 +50,16 @@
   left: 25px;
   width: 40px;
   height: 40px;
+>>>>>>> master
 }
+
+
+// <button href="#toggle-animation"
+//   class="avatar-navbar"
+//   type="button"
+//   uk-toggle="target: #toggle-animation;
+//   animation: uk-animation-fade">
+// </button>
+// <div id="toggle-animation"
+//      class="uk-card uk-card-default uk-card-body uk-margin-small">Animation
+// </div>

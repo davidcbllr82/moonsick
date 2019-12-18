@@ -1,4 +1,10 @@
 // ======================================================= //
+<<<<<<< HEAD
+// Events-Moments-Friends card #INDEX   <<<<<<<<<<<<  //
+// ====================================================== //
+.c-cntnr {
+  border: 3px solid yellow;
+=======
 // >>>>>>>>>>>>>>>>>>>   EVENT_CARD   <<<<<<<<<<<<<<<<<<<  //
 // ====================================================== //
 
@@ -7,37 +13,129 @@
   margin: 30px;
   padding: 20px;
   border-radius: 5px;
+>>>>>>> master
   display: flex;
-  vertical-align: middle;
-  justify-content: space-between;
-  transform: perspective(1px) translateZ(0);
+  flex-wrap: wrap;
   box-shadow: 0 0 1px transparent;
-  align-items: center;
   transition-duration: 0.3s;
-  transition-property: box-shadow, transform;
-  a {
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    &:hover {
-     color: rgb(200, 220, 220);
-      }
-  }
+  overflow: hidden;
 }
 
+<<<<<<< HEAD
+.c-cntnr-friends {
+  border: 3px solid #f5e652;
+  position: relative;
+  width: 400px;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 0 1px transparent;
+  transition-duration: 0.3s;
+  overflow: hidden;
+}
+.c-cntnr-moments {
+  border: 3px solid #EE6E79;
+  position: relative;
+  width: 40%;
+  height: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 0 1px transparent;
+  transition-duration: 0.3s;
+  overflow: hidden;
+}
+#c-time-moments {
+  background-color: #f5e652;
+  width: 170px;
+  height: 40px;
+  object-fit: cover;
+  text-align: center;
+  z-index: 30;
+  overflow: visible;
+}
+#c-link-moments {
+  font-size: 1em;
+  z-index: 50px;
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  object-fit: cover;
+  text-align: center;
+  background-color: rgba(51, 51, 51, 1);
+}
+.c-cntnr:hover,
+.c-cntnr:focus,
+.c-cntnr:active {
+=======
 .event-card:hover,
 .event-card:focus,
 .event-card:active {
+>>>>>>> master
   box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.5);
-  transform: scale(1.1);
+  transform: flip(1.1);
+}
+
+#c-img {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  z-index: 10;
+}
+
+#c-time {
+  background-color: #f5e652;
+  width: 170px;
+  height: 40px;
+  font-size: 1.5em;
+  object-fit: cover;
+  text-align: center;
+  z-index: 30;
+  overflow: visible;
+}
+#c-header {
+  cursor: pointer;
+  text-transform: uppercase;
+  flex-wrap: wrap;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  font-size: 0.8em;
+  background-color: rgba(74, 39, 183, 0.7);
+  text-overflow: ellipsis;
+  text-rendering: optimizeLegibility;
+}
+.c-description {
+  text-overflow: ellipsis;
+  background-color: rgba(74, 39, 183, 0.7);
+  opacity: 0%;
+  letter-spacing: 0.2em;
+  font-size: 1em;
+  z-index: 0;
+  text-rendering: optimizeLegibility;
+}
+#c-link {
+  font-size: 1em;
+  z-index: 50px;
+  object-fit: cover;
+  text-align: center;
+  background-color: rgba(51, 51, 51, 1);
 }
 
 // ======================================================= //
+<<<<<<< HEAD
+// >>>>>>>>>>>>>>>>>>>   EVENT_CARD#SHOW   <<<<<<<<<<  //
+=======
 // >>>>>>>>>>>>>>>>>>>   PROFILE_EVENT_CARD   << <<<<<<<<  //
+>>>>>>> master
 // ====================================================== //
 
 .profile-event {
-  padding: 50px;
+  padding: 10px;
   height: 170px;
   width: 270px;
   background-size: cover;
@@ -49,7 +147,22 @@
     }
   }
 }
+// ======================================================= //
+// >>>>>>>>>>>>>>>>>>>   PROFILE_CARD#INDEX   <<<<<<<<<<  //
+// ====================================================== //
 
+<<<<<<< HEAD
+.profile-card {
+  display: flex;
+  align-items: flex-start;
+  font-weight: thin;
+  font-family: Inconsolata;
+  font-size: 15px;
+  transform: perspective(-10px) translateZ(4);
+  transition-duration: 0.3s;
+  transition-property: transform;
+  img {
+=======
 .profile-link {
   .profile-card {
     display: flex;
@@ -61,17 +174,28 @@
     transition-property: transform;
 
     img {
+>>>>>>> master
       margin-right: 10px;
-    }
-  }
-
-  &:hover {
-    .profile-card {
-      transform: scale(1.2);
+      &:hover {
+        .profile-card {
+         transform: scale(1.2);
+      }
     }
   }
 }
 
+
+.mymoment {
+  background: #0076BB;
+  box-shadow: 0px 50px 10px rgba(0, 0, 0, 0.25);
+  height: 400px;
+  overflow: hidden;
+  border: 5px solid rgba(254, 255, 3, 0.9);
+}
+.mytitle {
+
+<<<<<<< HEAD
+=======
 // ======================================================= //
 // >>>>>>>>>>>>>>>>>>>   PROFILE_MOMENT_CARD   << <<<<<<<<  //
 // ====================================================== //
@@ -90,8 +214,46 @@
      color: rgb(200, 220, 220);
       }
   }
+>>>>>>> master
+}
+.myparagraph {
+  font-family: 'Red Hat Display';
+  position: absolute;
+  bottom: 0%;
+  left:0%;
+  color: black;
+  background-color: rgba(254, 255, 3, 1);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-weight: bold;
+  text-align: left;
+  line-height: 1.5em;
+  z-index: 150;
+}
+.mysubtitle {
+
+<<<<<<< HEAD
+}
+.mylink {
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  text-align: left;
+  line-height: 1em;
+  letter-spacing: 2px;
+  background-color: rgba(0,0,0, 0.9);
+  padding: 2%;
+  z-index: 100;
 }
 
+.myavatar {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+=======
 .moment-show-event-card {
   background: linear-gradient(to right, #b92b27, #1565c0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   padding: 50px;
@@ -101,4 +263,12 @@
   h3 {
     font-weight: bold;
   }
+>>>>>>> master
 }
+
+
+
+
+
+
+

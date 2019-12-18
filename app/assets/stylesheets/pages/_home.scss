@@ -1,3 +1,34 @@
+<<<<<<< HEAD
+// ================================
+// PROFILE#index
+// ˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅
+
+// ================================
+//  PROFILE#show
+//  ˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅
+
+.profile-about,
+.profile-moments,
+.profile-name,
+.profile-topsongs {
+  font-family: Inconsolata;
+  text-transform: uppercase;
+  background-color: yellow;
+}
+
+.container-moment-profile {
+  width: 380px;
+  height: 340px;
+  overflow-y: scroll;
+  overflow-x:hidden;
+ }
+
+.carousel-cell {
+  width: 300px;
+  height: 80px;
+  margin-right: 20px;
+}
+=======
 // =======================================================
 //                                                  DOGBOT
 //  ˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅
@@ -109,16 +140,39 @@
   display: flex;
   position: absolute;
   left: 110px;
+>>>>>>> master
 
-  .personal-info {
-    margin-top: 20px;
-    padding: 0 20px;
-    height: 180px;
-    background: rgba(250,233,235, 0.3);
-    backdrop-filter: blur(15px);
-  }
+// ================================
+// EVENTS#index
+// ˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅
+
+.visor-profile {
+  position: absolute;
+  width: 95%;
+  height: 73%;
+  top: 18%;
+  left: 3%;
+  border: 5px solid yellow;
 }
 
+<<<<<<< HEAD
+.visor-index-events {
+  position: absolute;
+  width: 95%;
+  height: 73%;
+  top: 18%;
+  left: 3%;
+  margin-bottom: 100px;
+  border: 5px solid yellow;
+  overflow-y: scroll;
+  padding-left: 100px;
+  padding-top: 100px;
+}
+
+// ==================================
+//  EVENT#show
+//  ˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅
+=======
 .loc-user {
   margin-top: 10px;
 }
@@ -194,6 +248,7 @@
 // =======================================================
 //                                             EVENT #show
 //  ˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅
+>>>>>>> master
 
 .event-details {
   display: flex;
@@ -233,6 +288,74 @@
   height: 620px;
   z-index: 10px;
 }
+<<<<<<< HEAD
+
+//  >=====================================
+//  Shared components PROFILE-EVENT
+//  ˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅
+
+.overflow-scroll__scroller {
+  overflow-y: scroll;
+  width: 700px;
+  height: 90px;
+  line-height: 1.3;
+  color: black;
+  text-align: right;
+}
+
+.overflow-scroll__scroller-profile-moment {
+  overflow-y: scroll;
+  width: 100px;
+  height: 50px;
+  line-height: 1.5;
+  color: black;
+  text-align: center;
+}
+
+// ================================
+// FORM#new
+// ˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅
+.sf-event-new {
+  position: absolute;
+  background-color: black;
+  width: 80%;
+  height: 71%;
+  left: 8%;
+  top: 20%;
+  margin-bottom: 100px;
+  overflow-y: scroll;
+  overflow-x:hidden;
+}
+
+// =======================================================
+//                                       MEDIA QUERies
+// ˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅
+
+// @media (prefers-color-scheme: dark) {
+//   img {
+//     opacity: .75;
+//     transition: opacity .5s ease-in-out;
+//   }
+//   img:hover {
+//     opacity: 1;
+//   }
+// }
+
+// :root {
+//   --body-bg: #fafafa;
+//   --body-color: #555;
+//   --link-color: #222;
+//   --link-color-hover: #000;
+// }
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --body-bg: #212529;
+//     --body-color: #6c757d;
+//     --link-color: #dee2e6;
+//     --link-color-hover: #fff;
+//   }
+// }
+=======
 
 .visor-playlist-header {
   position: relative;
@@ -305,6 +428,7 @@
   height: 100vh;
   overflow-y: scroll;
 }
+>>>>>>> master
 
 // ======================================================
 //                              GRANIM.JS:GRADIENT_CANVAS
