@@ -33,29 +33,6 @@
 
 # p "Here is 50 new Deyzers"
 
-p "Creating 50 profiles"
-
-50.times do |u|
-  url = "https://source.unsplash.com/random/?portrait"
-  profile = User.new(
-    email: Faker::Internet.unique.email,
-    password: Faker::Alphanumeric.alphanumeric(number: 10),
-    username: Faker::Artist.name,
-    bio: Faker::Hipster.paragraph_by_chars(characters: 256, supplemental: false),
-    location: Faker::Address.city,
-    )
-  profile.remote_profile_avatar_url = url
-  profile.remote_profile_banner_url = "https://source.unsplash.com/random/?textures-patters"
-  profile.spotify_top_1 = "spotify:track:1rgnBhdG2JDFTbYkYRZAku"
-  profile.spotify_top_2 = "spotify:track:21jGcNKet2qwijlDFuPiPb"
-  profile.spotify_top_3 = "spotify:track:7LzouaWGFCy4tkXDOOnEyM"
-  profile.spotify_top_4 = "spotify:track:4tidSEPF7Dbxcdxv3VyIHd"
-  profile.spotify_top_5 = "spotify:track:0Y2cjFzr3R7KLPeFyxaggg"
-  profile.save
-end
-
-p "Here is 50 new profiles"
-
 
 p "Creating 50 events"
 
@@ -76,6 +53,7 @@ end
 
 p "Your events are done!"
 
+
 # generate 10 moments for each user
 
 p "Generating 10 moments"
@@ -88,7 +66,7 @@ users.each do |user|
   10.times do
     moment = Moment.new
     moment.user = user
-    moment.content = Faker::GreekPhilosophers.quote
+    moment.content = Faker::TvShows::RuPaul.quote
     offset = rand(event_count)
     moment.event = Event.offset(offset).first
     moment.save

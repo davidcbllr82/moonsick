@@ -1,0 +1,63 @@
+
+// ===================================== > ANIMATED
+// =========================== Underline gradient //
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+  width: 90px;
+  height: 7px;
+}
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  transform: scaleX(0);
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+// ===================================== > BUTTONS < ==//
+.mouse-cursor-gradient-tracking {
+  position: absolute;
+  background: #623BA6;
+  padding: 0.5rem 1rem;
+  font-family: Rationale;
+  font-size: 1.2rem;
+  width: 167px;
+  height: 57;
+  background: #623BA6;
+  box-shadow: 10px 10px 10px rgba(126, 116, 116, 0.25);
+  border: none;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+}
+.mouse-cursor-gradient-tracking span {
+  position: relative;
+}
+.mouse-cursor-gradient-tracking::before {
+  --size: 0;
+  content: '';
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, #F1B042, transparent);
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.9s ease-out;
+}
+.mouse-cursor-gradient-tracking:hover::before {
+  --size: 200px;
+}
+// ================================================ > HEADER < ======== //
+
+
+
+

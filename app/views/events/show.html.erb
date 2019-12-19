@@ -1,12 +1,10 @@
 
-  <!-- <div class="event-banner" style="background-image: url(<%#= cl_image_path @event.banner %>)"> -->
-  <div class="event-details">
-    <%= cl_image_tag @event.event_avatar, class: "avatar-square-profile" %>
-    <div class="event-info">
-      <div class="overflow-scroll__scroller">
-        <%= @event.description %>
-      </div>
-    </div>
+  <div class="event-banner" style="background-image: url(<%= cl_image_path @event.banner %>)"></div>
+
+  <%= cl_image_tag @event.event_avatar, class: "avatar-square-profile" %>
+
+  <div class="overflow-scroll__scroller">
+    <%= @event.description %>
   </div>
 
   <h1 class="event-name"><%= @event.title %></h1>
@@ -32,10 +30,6 @@
   </ul>
 
   <!-- Playlist & Create,display moments -->
-</div>
-<!--   </div> -->
-
-<!-- Playlist & Create,display moments -->
   <div class="embeded-player">
     <div class="visor-playlist-header">
       <p class="visor-txt"><%= @event.title %>' beats</p>
@@ -48,16 +42,6 @@
       <%= cl_image_tag(m.user.profile_avatar, class: 'avatar')%>
       <h3><%= m.user.username %></h3>
       <p><%= m.content %></p>
-    </div>
-
-    <div class="event-carousel" data-flickity='{ "autoPlay": false, "wrapAround": true}'>
-        <% @moments.each do |m| %>
-          <div class="moment-show-event-card" >
-            <%= cl_image_tag(m.user.profile_avatar, class: 'avatar')%>
-            <h3><%= m.user.username %></h3>
-            <p><%= m.content %></p>
-          </div>
-        <% end %>
     </div>
   <% end %>
 
