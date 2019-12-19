@@ -40,7 +40,7 @@ p "Creating 50 profiles"
   profile = User.new(
     email: Faker::Internet.unique.email,
     password: Faker::Alphanumeric.alphanumeric(number: 10),
-    username: Faker::Artist.unique.name,
+    username: Faker::Artist.name,
     bio: Faker::Hipster.paragraph_by_chars(characters: 256, supplemental: false),
     location: Faker::Address.city,
     )
