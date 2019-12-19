@@ -10,7 +10,6 @@
 # generate 50 profiles
 
 
-<<<<<<< HEAD
 # p "Creating 50 fake people"
 
 # 50.times do |u|
@@ -33,7 +32,7 @@
 # end
 
 # p "Here is 50 new Deyzers"
-=======
+
 p "Creating 50 profiles"
 
 50.times do |u|
@@ -41,8 +40,8 @@ p "Creating 50 profiles"
   profile = User.new(
     email: Faker::Internet.unique.email,
     password: Faker::Alphanumeric.alphanumeric(number: 10),
-    username: Faker::Name.unique.name,
-    bio: Faker::Movies::VForVendetta.speech,
+    username: Faker::Artist.unique.name,
+    bio: Faker::Hipster.paragraph_by_chars(characters: 256, supplemental: false),
     location: Faker::Address.city,
     )
   profile.remote_profile_avatar_url = url
@@ -56,7 +55,6 @@ p "Creating 50 profiles"
 end
 
 p "Here is 50 new profiles"
->>>>>>> master
 
 
 p "Creating 50 events"
@@ -78,11 +76,7 @@ end
 
 p "Your events are done!"
 
-<<<<<<< HEAD
-
 # generate 10 moments for each user
-=======
->>>>>>> master
 
 p "Generating 10 moments"
 
@@ -94,7 +88,7 @@ users.each do |user|
   10.times do
     moment = Moment.new
     moment.user = user
-    moment.content = Faker::TvShows::RuPaul.quote
+    moment.content = Faker::GreekPhilosophers.quote
     offset = rand(event_count)
     moment.event = Event.offset(offset).first
     moment.save

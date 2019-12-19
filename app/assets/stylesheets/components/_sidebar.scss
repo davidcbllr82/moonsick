@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // .sidebar {
 //   background-color: #0E1732;
 //   display: flex;
@@ -33,39 +33,4 @@
 //   position: absolute;
 //   top: 30px;
 // }
-=======
-.sidebar {
-  background-color: #0E1732;
-  display: flex;
-  padding-top: 25px;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  z-index: 10;
-}
 
-.container-sidebar {
-  display: flex;
-  flex-direction: column;
-  padding-top: 100px;
-  height: 100vh;
-}
-
-.sidebar-items,
-.visor-side-column-icons,
-.avatar-square-sidebar,
-.sidebar-logo {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: no-wrap;
-  margin-bottom: 10px;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-}
-
-.side-bar-logo {
-  position: absolute;
-  top: 30px;
-}
->>>>>>> master
