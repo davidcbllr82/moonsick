@@ -1,9 +1,4 @@
-// =======================================================
-//                                               MAIN TITLE
-// ˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅
 
-// _toggle.scss
-<<<<<<< HEAD
 // .toggle {
 //   margin-top: 100px;
 //   position: relative;
@@ -200,56 +195,3 @@
 
 .toggle + .toggle-button:before {
   display: none;
-=======
-.switch {
-  margin-top: 100px;
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 15px;
-  background-color: rgba(241, 176, 66, 1);
-  transition: all 0.3s;
-}
-
-.switch::after {
-  content: '';
-  position: absolute;
-  width: 10px;
-  height: 15px;
-  background-color: #F7F5EE;
-  left: 0;
-  transition: all 0.4s;
-}
-
-input[type='checkbox']:checked + .switch::after {
-  transform: translateX(35px);
-}
-
-input[type='checkbox']:checked + .switch {
-  background-color: #4A27B7;
->>>>>>> master
-}
-
-.toggle:checked + .toggle-button:after {
-  left: 50%;
-}
-
-.toggle + .toggle-button {
-  padding: 2px;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
-  border: 2px solid rgba(156, 174, 192, 0.27);
-  border-radius: 2em;
-}
-
-.toggle + .toggle-button:after {
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
-  background: rgba(156, 174, 192, 0.27);
-  content: "";
-  border-radius: 1em;
-}
-
-.toggle:checked + .toggle-button:after {
-  left: 50%;
-}

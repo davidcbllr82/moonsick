@@ -4,6 +4,7 @@
     <div class="gradient"></div>
     <div class="spotlight"></div>
   </div>
+
   <%= simple_form_for(current_user, url: profile_path) do |e| %>
   <div class="form-edit-profile">
     <%= e.label :username %>
@@ -25,7 +26,9 @@
 
       <%= e.input :profile_banner %>
       <%= e.input :profile_banner_cache, as: :hidden %>
-<!-- upload for favorite spotify songs -->
+
+      <!-- upload for favorite spotify songs -->
+
       <%= e.label :spotify_top_1 %>
       <%= e.text_field :spotify_top_1%>
 
