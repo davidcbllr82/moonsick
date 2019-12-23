@@ -46,11 +46,9 @@
   width: 95%;
   height: 73%;
   top: 18%;
-  left: 3%;
+  margin-left: 100px;
   margin-bottom: 100px;
-  border: 5px solid yellow;
   overflow-y: scroll;
-  padding-left: 100px;
   padding-top: 100px;
 }
 
@@ -90,9 +88,7 @@
 }
 
 .embeded-player {
-  position: absolute;
-  margin-top: -70px;
-  margin-left: 40px;
+
   height: 620px;
   z-index: 10px;
 }
