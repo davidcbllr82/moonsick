@@ -19,7 +19,7 @@ gem "rails-uikit", git: 'git://github.com/nicbet/rails-uikit.git'
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
 gem 'pundit'
 gem 'cloudinary', '~> 1.9.1'
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 2.1'
 gem 'faker'
 
 group :development do
